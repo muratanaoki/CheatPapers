@@ -1,0 +1,12 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[svg]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "prettier.parser": "html"
+  },
+  "prettier.documentSelectors": ["**/*.svg"],
+  "files.associations": {
+    "*.svg": "html"
+  }
+}
