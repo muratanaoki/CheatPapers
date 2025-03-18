@@ -1,165 +1,1389 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
-  <!-- 背景グラデーション -->
+  <!-- Definitions -->
   <defs>
+    <!-- Background gradient -->
     <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0A1022" />
-      <stop offset="100%" stop-color="#1A2942" />
+      <stop offset="0%" stop-color="#E8F5FE" />
+      <stop offset="100%" stop-color="#F8F9FA" />
     </linearGradient>
-    
-    <!-- グロー効果 -->
-    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="5" result="blur" />
-      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+
+    <!-- Card gradients -->
+    <linearGradient id="win-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0078D7" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#0078D7" stop-opacity="0.05" />
+    </linearGradient>
+    <linearGradient id="ctrl-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#19A15F" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#19A15F" stop-opacity="0.05" />
+    </linearGradient>
+    <linearGradient id="alt-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#D83B01" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#D83B01" stop-opacity="0.05" />
+    </linearGradient>
+    <linearGradient id="shift-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#5C2D91" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#5C2D91" stop-opacity="0.05" />
+    </linearGradient>
+
+    <!-- Shadow effects -->
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow
+        dx="0"
+        dy="2"
+        stdDeviation="4"
+        flood-color="#000"
+        flood-opacity="0.1"
+      />
     </filter>
-    
-    <!-- ボックスシャドウ -->
-    <filter id="box-shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#000" flood-opacity="0.3" />
+
+    <!-- Title shadow effect -->
+    <filter id="title-shadow" x="-5%" y="-5%" width="110%" height="120%">
+      <feDropShadow
+        dx="0"
+        dy="1"
+        stdDeviation="1"
+        flood-color="#0F172A"
+        flood-opacity="0.2"
+      />
     </filter>
-    
-    <!-- パネル背景用グラデーション -->
-    <linearGradient id="win-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0078D7" stop-opacity="0.07" />
-      <stop offset="100%" stop-color="#0078D7" stop-opacity="0.14" />
-    </linearGradient>
-    
-    <linearGradient id="ctrl-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#19A15F" stop-opacity="0.07" />
-      <stop offset="100%" stop-color="#19A15F" stop-opacity="0.14" />
-    </linearGradient>
-    
-    <linearGradient id="alt-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#D83B01" stop-opacity="0.07" />
-      <stop offset="100%" stop-color="#D83B01" stop-opacity="0.14" />
-    </linearGradient>
-    
-    <linearGradient id="shift-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#5C2D91" stop-opacity="0.07" />
-      <stop offset="100%" stop-color="#5C2D91" stop-opacity="0.14" />
-    </linearGradient>
   </defs>
-  
-  <!-- 背景 -->
+
+  <!-- Background -->
   <rect width="1920" height="1080" fill="url(#bg-gradient)" />
-  
-  <!-- 装飾的要素 -->
-  <circle cx="200" cy="200" r="600" fill="#0078D7" fill-opacity="0.02" />
-  <circle cx="1800" cy="900" r="500" fill="#19A15F" fill-opacity="0.02" />
-  <circle cx="960" cy="540" r="800" fill="#5C2D91" fill-opacity="0.015" />
-    
-  <!-- タイトル -->
-  <g filter="url(#glow)">
-    <text x="960" y="90" font-family="'Segoe UI', sans-serif" font-size="46" font-weight="700" fill="#FFFFFF" text-anchor="middle">Windows ショートカット</text>
+
+  <!-- Subtle dot pattern -->
+  <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse">
+    <circle cx="2" cy="2" r="1" fill="#0078D7" fill-opacity="0.1" />
+  </pattern>
+  <rect width="1920" height="1080" fill="url(#dots)" />
+
+  <!-- Title -->
+  <text
+    x="960"
+    y="80"
+    font-family="'Segoe UI', Arial, sans-serif"
+    font-size="52"
+    font-weight="700"
+    fill="#0078D7"
+    text-anchor="middle"
+    filter="url(#title-shadow)"
+  >
+    Windows ショートカット
+  </text>
+
+  <!-- Windows Key Section -->
+  <g transform="translate(100, 150)">
+    <rect
+      width="830"
+      height="360"
+      rx="16"
+      ry="16"
+      fill="url(#win-gradient)"
+      filter="url(#shadow)"
+      stroke="#0078D7"
+      stroke-width="2"
+      stroke-opacity="0.6"
+    />
+    <text
+      x="40"
+      y="50"
+      font-family="'Segoe UI', Arial, sans-serif"
+      font-size="28"
+      font-weight="600"
+      fill="#0078D7"
+    >
+      Windows キー
+    </text>
+
+    <!-- Left column -->
+    <g transform="translate(40, 100)">
+      <text
+        class="shortcut"
+        x="0"
+        y="0"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#0078D7"
+      >
+        Win
+      </text>
+      <text
+        class="shortcut"
+        x="0"
+        y="40"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#0078D7"
+      >
+        Win + D
+      </text>
+      <text
+        class="shortcut"
+        x="0"
+        y="80"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#0078D7"
+      >
+        Win + E
+      </text>
+      <text
+        class="shortcut"
+        x="0"
+        y="120"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#0078D7"
+      >
+        Win + I
+      </text>
+      <text
+        class="shortcut"
+        x="0"
+        y="160"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#0078D7"
+      >
+        Win + L
+      </text>
+      <text
+        class="shortcut"
+        x="0"
+        y="200"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#0078D7"
+      >
+        Win + M
+      </text>
+      <text
+        class="shortcut"
+        x="0"
+        y="240"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#0078D7"
+      >
+        Win + R
+      </text>
+
+      <text
+        class="description"
+        x="120"
+        y="0"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        スタートメニューを表示/非表示
+      </text>
+      <text
+        class="description"
+        x="120"
+        y="40"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        デスクトップを表示する
+      </text>
+      <text
+        class="description"
+        x="120"
+        y="80"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        エクスプローラーを起動する
+      </text>
+      <text
+        class="description"
+        x="120"
+        y="120"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        Windowsの設定を起動
+      </text>
+      <text
+        class="description"
+        x="120"
+        y="160"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        パソコンの画面をロック
+      </text>
+      <text
+        class="description"
+        x="120"
+        y="200"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        すべてのウィンドウを最小化
+      </text>
+      <text
+        class="description"
+        x="120"
+        y="240"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        ファイル名を指定して実行
+      </text>
+    </g>
+
+    <!-- Right column -->
+    <g transform="translate(450, 100)">
+      <text
+        class="shortcut"
+        x="0"
+        y="0"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#0078D7"
+      >
+        Win + Shift + S
+      </text>
+      <text
+        class="shortcut"
+        x="0"
+        y="40"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#0078D7"
+      >
+        Win + Tab
+      </text>
+      <text
+        class="shortcut"
+        x="0"
+        y="80"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#0078D7"
+      >
+        Win + V
+      </text>
+      <text
+        class="shortcut"
+        x="0"
+        y="120"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#0078D7"
+      >
+        Win + X
+      </text>
+      <text
+        class="shortcut"
+        x="0"
+        y="160"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#0078D7"
+      >
+        Win + ↑
+      </text>
+      <text
+        class="shortcut"
+        x="0"
+        y="200"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#0078D7"
+      >
+        Win + ↓
+      </text>
+      <text
+        class="shortcut"
+        x="0"
+        y="240"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#0078D7"
+      >
+        Win + .
+      </text>
+
+      <text
+        class="description"
+        x="135"
+        y="0"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        スクリーンショットの撮影
+      </text>
+      <text
+        class="description"
+        x="135"
+        y="40"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        タスクビューを表示
+      </text>
+      <text
+        class="description"
+        x="135"
+        y="80"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        クリップボード履歴を表示
+      </text>
+      <text
+        class="description"
+        x="135"
+        y="120"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        クイックリンクメニュー
+      </text>
+      <text
+        class="description"
+        x="135"
+        y="160"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        ウィンドウを最大化
+      </text>
+      <text
+        class="description"
+        x="135"
+        y="200"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        ウィンドウを最小化
+      </text>
+      <text
+        class="description"
+        x="135"
+        y="240"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        絵文字パネルを開く
+      </text>
+    </g>
   </g>
-  
-  <!-- Windows キーのセクション -->
-  <rect x="140" y="160" width="780" height="380" rx="18" ry="18" fill="url(#win-gradient)" stroke="#0078D7" stroke-width="1.5" filter="url(#box-shadow)" />
-  <circle cx="160" cy="180" r="6" fill="#0078D7" fill-opacity="0.6" />
-  <text x="190" y="205" font-family="'Segoe UI', sans-serif" font-size="30" font-weight="600" fill="#0078D7">Windows キー</text>
-  <rect x="190" y="218" width="180" height="2" fill="#0078D7" fill-opacity="0.7" />
-  
-  <!-- Windows キーのショートカット リスト - 左側 -->
-  <text x="190" y="265" font-family="'Segoe UI', sans-serif" font-size="16.5" fill="#E6E6E6">
-    <tspan x="190" dy="0">Win：スタートメニューを表示/非表示</tspan>
-    <tspan x="190" dy="34">Win + D：デスクトップを表示する</tspan>
-    <tspan x="190" dy="34">Win + E：エクスプローラーを起動する</tspan>
-    <tspan x="190" dy="34">Win + I：Windowsの設定を起動</tspan>
-    <tspan x="190" dy="34">Win + L：パソコンの画面をロック</tspan>
-    <tspan x="190" dy="34">Win + M：すべてのウィンドウを最小化</tspan>
-    <tspan x="190" dy="34">Win + R：ファイル名を指定して実行</tspan>
-    <tspan x="190" dy="34">Win + G：ゲームバーを開く</tspan>
-  </text>
-  
-  <!-- Windows キーのショートカット リスト - 右側 -->
-  <text x="540" y="265" font-family="'Segoe UI', sans-serif" font-size="16.5" fill="#E6E6E6">
-    <tspan x="540" dy="0">Win + Shift + S：スクリーンショットの撮影</tspan>
-    <tspan x="540" dy="34">Win + Tab：タスクビューを表示</tspan>
-    <tspan x="540" dy="34">Win + V：クリップボード履歴を表示</tspan>
-    <tspan x="540" dy="34">Win + X：クイックリンクメニュー</tspan>
-    <tspan x="540" dy="34">Win + ↑：ウィンドウを最大化</tspan>
-    <tspan x="540" dy="34">Win + ↓：ウィンドウを最小化</tspan>
-    <tspan x="540" dy="34">Win + ←→：ウィンドウを半分に配置</tspan>
-    <tspan x="540" dy="34">Win + .(ピリオド)：絵文字パネルを開く</tspan>
-  </text>
-  
-  <!-- Ctrl キーのセクション -->
-  <rect x="1000" y="160" width="780" height="380" rx="18" ry="18" fill="url(#ctrl-gradient)" stroke="#19A15F" stroke-width="1.5" filter="url(#box-shadow)" />
-  <circle cx="1020" cy="180" r="6" fill="#19A15F" fill-opacity="0.6" />
-  <text x="1050" y="205" font-family="'Segoe UI', sans-serif" font-size="30" font-weight="600" fill="#19A15F">Ctrl キー</text>
-  <rect x="1050" y="218" width="130" height="2" fill="#19A15F" fill-opacity="0.7" />
-  
-  <!-- Ctrl キーのショートカット リスト - 左側 -->
-  <text x="1050" y="265" font-family="'Segoe UI', sans-serif" font-size="16.5" fill="#E6E6E6">
-    <tspan x="1050" dy="0">Ctrl + A：すべてを選択</tspan>
-    <tspan x="1050" dy="34">Ctrl + C：選択した項目をコピー</tspan>
-    <tspan x="1050" dy="34">Ctrl + X：選択した項目を切り取り</tspan>
-    <tspan x="1050" dy="34">Ctrl + V：コピーした項目を貼り付け</tspan>
-    <tspan x="1050" dy="34">Ctrl + Z：操作を元に戻す</tspan>
-    <tspan x="1050" dy="34">Ctrl + Y：元に戻した操作をやり直す</tspan>
-    <tspan x="1050" dy="34">Ctrl + F：検索</tspan>
-    <tspan x="1050" dy="34">Ctrl + F4：タブまたはウィンドウを閉じる</tspan>
-  </text>
-  
-  <!-- Ctrl キーのショートカット リスト - 右側 -->
-  <text x="1400" y="265" font-family="'Segoe UI', sans-serif" font-size="16.5" fill="#E6E6E6">
-    <tspan x="1400" dy="0">Ctrl + N：新規ウィンドウを開く</tspan>
-    <tspan x="1400" dy="34">Ctrl + O：ファイルを開く</tspan>
-    <tspan x="1400" dy="34">Ctrl + P：印刷画面を表示</tspan>
-    <tspan x="1400" dy="34">Ctrl + S：ファイルを保存</tspan>
-    <tspan x="1400" dy="34">Ctrl + W：現在のウィンドウを閉じる</tspan>
-    <tspan x="1400" dy="34">Ctrl + Tab：タブを切り替え</tspan>
-    <tspan x="1400" dy="34">Ctrl + Shift + ESC：タスクマネージャー</tspan>
-    <tspan x="1400" dy="34">Ctrl + Shift + N：新しいフォルダを作成</tspan>
-  </text>
-  
-  <!-- Alt キーのセクション -->
-  <rect x="140" y="580" width="780" height="350" rx="18" ry="18" fill="url(#alt-gradient)" stroke="#D83B01" stroke-width="1.5" filter="url(#box-shadow)" />
-  <circle cx="160" cy="600" r="6" fill="#D83B01" fill-opacity="0.6" />
-  <text x="190" y="625" font-family="'Segoe UI', sans-serif" font-size="30" font-weight="600" fill="#D83B01">Alt キー</text>
-  <rect x="190" y="638" width="120" height="2" fill="#D83B01" fill-opacity="0.7" />
-  
-  <!-- Alt キーのショートカット リスト - 左側 -->
-  <text x="190" y="685" font-family="'Segoe UI', sans-serif" font-size="16.5" fill="#E6E6E6">
-    <tspan x="190" dy="0">Alt + Tab：開いているアプリの切り替え</tspan>
-    <tspan x="190" dy="34">Alt + F4：アクティブなアプリを終了</tspan>
-    <tspan x="190" dy="34">Alt + Space：ウィンドウメニューを表示</tspan>
-    <tspan x="190" dy="34">Alt + Enter：プロパティを表示</tspan>
-    <tspan x="190" dy="34">Alt + F：ファイルメニューを開く</tspan>
-    <tspan x="190" dy="34">Alt + E：編集メニューを開く</tspan>
-  </text>
-  
-  <!-- Alt キーのショートカット リスト - 右側 -->
-  <text x="540" y="685" font-family="'Segoe UI', sans-serif" font-size="16.5" fill="#E6E6E6">
-    <tspan x="540" dy="0">Alt + Ctrl + Del：セキュリティ画面を表示</tspan>
-    <tspan x="540" dy="34">Alt + PrtScn：現在ウィンドウをキャプチャ</tspan>
-    <tspan x="540" dy="34">Alt + 左矢印：ブラウザで前のページ</tspan>
-    <tspan x="540" dy="34">Alt + 右矢印：ブラウザで次のページ</tspan>
-    <tspan x="540" dy="34">Alt + Esc：タスク順に切り替え</tspan>
-    <tspan x="540" dy="34">Alt + Shift + Tab：逆順にアプリ切り替え</tspan>
-  </text>
-  
-  <!-- Shift キーのセクション -->
-  <rect x="1000" y="580" width="780" height="350" rx="18" ry="18" fill="url(#shift-gradient)" stroke="#5C2D91" stroke-width="1.5" filter="url(#box-shadow)" />
-  <circle cx="1020" cy="600" r="6" fill="#5C2D91" fill-opacity="0.6" />
-  <text x="1050" y="625" font-family="'Segoe UI', sans-serif" font-size="30" font-weight="600" fill="#5C2D91">Shiftキー＆便利なキー</text>
-  <rect x="1050" y="638" width="150" height="2" fill="#5C2D91" fill-opacity="0.7" />
-  
-  <!-- Shift キーのショートカット リスト - 左側 -->
-  <text x="1050" y="685" font-family="'Segoe UI', sans-serif" font-size="16.5" fill="#E6E6E6">
-    <tspan x="1050" dy="0">Shift + Delete：アイテムを完全に削除</tspan>
-    <tspan x="1050" dy="34">Shift + クリック：連続選択</tspan>
-    <tspan x="1050" dy="34">Shift + 矢印：複数の項目を選択</tspan>
-    <tspan x="1050" dy="34">Shift + F10：右クリックメニューを表示</tspan>
-    <tspan x="1050" dy="34">Shift + Tab：前のフィールドに移動</tspan>
-    <tspan x="1050" dy="34">Shift + Home/End：カーソルから選択</tspan>
-  </text>
-  
-  <!-- Shift キーのショートカット リスト - 右側 -->
-  <text x="1400" y="685" font-family="'Segoe UI', sans-serif" font-size="16.5" fill="#E6E6E6">
-    <tspan x="1400" dy="0">F1：ヘルプを表示</tspan>
-    <tspan x="1400" dy="34">F2：選択したアイテムの名前を変更</tspan>
-    <tspan x="1400" dy="34">F3：ファイル内検索</tspan>
-    <tspan x="1400" dy="34">F5：更新/再読み込み</tspan>
-    <tspan x="1400" dy="34">F11：全画面表示の切り替え</tspan>
-  </text>
+
+  <!-- Ctrl Key Section -->
+  <g transform="translate(990, 150)">
+    <rect
+      width="830"
+      height="360"
+      rx="16"
+      ry="16"
+      fill="url(#ctrl-gradient)"
+      filter="url(#shadow)"
+      stroke="#19A15F"
+      stroke-width="2"
+      stroke-opacity="0.6"
+    />
+    <text
+      x="40"
+      y="50"
+      font-family="'Segoe UI', Arial, sans-serif"
+      font-size="28"
+      font-weight="600"
+      fill="#19A15F"
+    >
+      Ctrl キー
+    </text>
+
+    <!-- Left column -->
+    <g transform="translate(40, 100)">
+      <text
+        class="shortcut"
+        x="0"
+        y="0"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#19A15F"
+      >
+        Ctrl + A
+      </text>
+      <text
+        class="shortcut"
+        x="0"
+        y="40"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#19A15F"
+      >
+        Ctrl + C
+      </text>
+      <text
+        class="shortcut"
+        x="0"
+        y="80"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#19A15F"
+      >
+        Ctrl + X
+      </text>
+      <text
+        class="shortcut"
+        x="0"
+        y="120"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#19A15F"
+      >
+        Ctrl + V
+      </text>
+      <text
+        class="shortcut"
+        x="0"
+        y="160"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#19A15F"
+      >
+        Ctrl + Z
+      </text>
+      <text
+        class="shortcut"
+        x="0"
+        y="200"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#19A15F"
+      >
+        Ctrl + Y
+      </text>
+      <text
+        class="shortcut"
+        x="0"
+        y="240"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#19A15F"
+      >
+        Ctrl + F
+      </text>
+
+      <text
+        class="description"
+        x="120"
+        y="0"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        すべてを選択
+      </text>
+      <text
+        class="description"
+        x="120"
+        y="40"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        選択した項目をコピー
+      </text>
+      <text
+        class="description"
+        x="120"
+        y="80"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        選択した項目を切り取り
+      </text>
+      <text
+        class="description"
+        x="120"
+        y="120"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        コピーした項目を貼り付け
+      </text>
+      <text
+        class="description"
+        x="120"
+        y="160"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        操作を元に戻す
+      </text>
+      <text
+        class="description"
+        x="120"
+        y="200"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        元に戻した操作をやり直す
+      </text>
+      <text
+        class="description"
+        x="120"
+        y="240"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        検索
+      </text>
+    </g>
+
+    <!-- Right column -->
+    <g transform="translate(450, 100)">
+      <text
+        class="shortcut"
+        x="0"
+        y="0"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#19A15F"
+      >
+        Ctrl + N
+      </text>
+      <text
+        class="shortcut"
+        x="0"
+        y="40"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#19A15F"
+      >
+        Ctrl + O
+      </text>
+      <text
+        class="shortcut"
+        x="0"
+        y="80"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#19A15F"
+      >
+        Ctrl + P
+      </text>
+      <text
+        class="shortcut"
+        x="0"
+        y="120"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#19A15F"
+      >
+        Ctrl + S
+      </text>
+      <text
+        class="shortcut"
+        x="0"
+        y="160"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#19A15F"
+      >
+        Ctrl + W
+      </text>
+      <text
+        class="shortcut"
+        x="0"
+        y="200"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#19A15F"
+      >
+        Ctrl + Tab
+      </text>
+      <text
+        class="shortcut"
+        x="0"
+        y="240"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#19A15F"
+      >
+        Ctrl + Shift + Esc
+      </text>
+
+      <text
+        class="description"
+        x="135"
+        y="0"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        新規ウィンドウを開く
+      </text>
+      <text
+        class="description"
+        x="135"
+        y="40"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        ファイルを開く
+      </text>
+      <text
+        class="description"
+        x="135"
+        y="80"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        印刷画面を表示
+      </text>
+      <text
+        class="description"
+        x="135"
+        y="120"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        ファイルを保存
+      </text>
+      <text
+        class="description"
+        x="135"
+        y="160"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        現在のウィンドウを閉じる
+      </text>
+      <text
+        class="description"
+        x="135"
+        y="200"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        タブを切り替え
+      </text>
+      <text
+        class="description"
+        x="135"
+        y="240"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        タスクマネージャー
+      </text>
+    </g>
+  </g>
+
+  <!-- Alt Key Section -->
+  <g transform="translate(100, 550)">
+    <rect
+      width="830"
+      height="360"
+      rx="16"
+      ry="16"
+      fill="url(#alt-gradient)"
+      filter="url(#shadow)"
+      stroke="#D83B01"
+      stroke-width="2"
+      stroke-opacity="0.6"
+    />
+    <text
+      x="40"
+      y="50"
+      font-family="'Segoe UI', Arial, sans-serif"
+      font-size="28"
+      font-weight="600"
+      fill="#D83B01"
+    >
+      Alt キー
+    </text>
+
+    <!-- Left column -->
+    <g transform="translate(40, 100)">
+      <text
+        class="shortcut"
+        x="0"
+        y="0"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#D83B01"
+      >
+        Alt + Tab
+      </text>
+      <text
+        class="shortcut"
+        x="0"
+        y="40"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#D83B01"
+      >
+        Alt + F4
+      </text>
+      <text
+        class="shortcut"
+        x="0"
+        y="80"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#D83B01"
+      >
+        Alt + Space
+      </text>
+      <text
+        class="shortcut"
+        x="0"
+        y="120"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#D83B01"
+      >
+        Alt + Enter
+      </text>
+      <text
+        class="shortcut"
+        x="0"
+        y="160"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#D83B01"
+      >
+        Alt + F
+      </text>
+      <text
+        class="shortcut"
+        x="0"
+        y="200"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#D83B01"
+      >
+        Alt + E
+      </text>
+      <text
+        class="shortcut"
+        x="0"
+        y="240"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#D83B01"
+      >
+        Alt + Esc
+      </text>
+
+      <text
+        class="description"
+        x="120"
+        y="0"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        開いているアプリの切り替え
+      </text>
+      <text
+        class="description"
+        x="120"
+        y="40"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        アクティブなアプリを終了
+      </text>
+      <text
+        class="description"
+        x="120"
+        y="80"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        ウィンドウメニューを表示
+      </text>
+      <text
+        class="description"
+        x="120"
+        y="120"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        プロパティを表示
+      </text>
+      <text
+        class="description"
+        x="120"
+        y="160"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        ファイルメニューを開く
+      </text>
+      <text
+        class="description"
+        x="120"
+        y="200"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        編集メニューを開く
+      </text>
+      <text
+        class="description"
+        x="120"
+        y="240"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        タスク順に切り替え
+      </text>
+    </g>
+
+    <!-- Right column -->
+    <g transform="translate(450, 100)">
+      <text
+        class="shortcut"
+        x="0"
+        y="0"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#D83B01"
+      >
+        Alt + Ctrl + Del
+      </text>
+      <text
+        class="shortcut"
+        x="0"
+        y="40"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#D83B01"
+      >
+        Alt + PrtScn
+      </text>
+      <text
+        class="shortcut"
+        x="0"
+        y="80"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#D83B01"
+      >
+        Alt + ←
+      </text>
+      <text
+        class="shortcut"
+        x="0"
+        y="120"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#D83B01"
+      >
+        Alt + →
+      </text>
+      <text
+        class="shortcut"
+        x="0"
+        y="160"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#D83B01"
+      >
+        Alt + Shift + Tab
+      </text>
+      <text
+        class="shortcut"
+        x="0"
+        y="200"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#D83B01"
+      >
+        Alt + Home
+      </text>
+      <text
+        class="shortcut"
+        x="0"
+        y="240"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#D83B01"
+      >
+        Alt + Ctrl + Tab
+      </text>
+
+      <text
+        class="description"
+        x="135"
+        y="0"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        セキュリティ画面を表示
+      </text>
+      <text
+        class="description"
+        x="135"
+        y="40"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        現在ウィンドウをキャプチャ
+      </text>
+      <text
+        class="description"
+        x="135"
+        y="80"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        ブラウザで前のページに移動
+      </text>
+      <text
+        class="description"
+        x="135"
+        y="120"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        ブラウザで次のページに移動
+      </text>
+      <text
+        class="description"
+        x="135"
+        y="160"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        逆順にアプリ切り替え
+      </text>
+      <text
+        class="description"
+        x="135"
+        y="200"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        ブラウザでホームページに移動
+      </text>
+      <text
+        class="description"
+        x="135"
+        y="240"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        タスク切替表示継続
+      </text>
+    </g>
+  </g>
+
+  <!-- Shift Key Section -->
+  <g transform="translate(990, 550)">
+    <rect
+      width="830"
+      height="360"
+      rx="16"
+      ry="16"
+      fill="url(#shift-gradient)"
+      filter="url(#shadow)"
+      stroke="#5C2D91"
+      stroke-width="2"
+      stroke-opacity="0.6"
+    />
+    <text
+      x="40"
+      y="50"
+      font-family="'Segoe UI', Arial, sans-serif"
+      font-size="28"
+      font-weight="600"
+      fill="#5C2D91"
+    >
+      Shift キー＆便利なキー
+    </text>
+
+    <!-- Left column -->
+    <g transform="translate(40, 100)">
+      <text
+        class="shortcut"
+        x="0"
+        y="0"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#5C2D91"
+      >
+        Shift + Delete
+      </text>
+      <text
+        class="shortcut"
+        x="0"
+        y="40"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#5C2D91"
+      >
+        Shift + クリック
+      </text>
+      <text
+        class="shortcut"
+        x="0"
+        y="80"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#5C2D91"
+      >
+        Shift + 矢印
+      </text>
+      <text
+        class="shortcut"
+        x="0"
+        y="120"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#5C2D91"
+      >
+        Shift + F10
+      </text>
+      <text
+        class="shortcut"
+        x="0"
+        y="160"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#5C2D91"
+      >
+        Shift + Tab
+      </text>
+      <text
+        class="shortcut"
+        x="0"
+        y="200"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#5C2D91"
+      >
+        Shift + Home
+      </text>
+      <text
+        class="shortcut"
+        x="0"
+        y="240"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#5C2D91"
+      >
+        Shift + Ctrl + N
+      </text>
+
+      <text
+        class="description"
+        x="120"
+        y="0"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        アイテムを完全に削除
+      </text>
+      <text
+        class="description"
+        x="120"
+        y="40"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        連続選択
+      </text>
+      <text
+        class="description"
+        x="120"
+        y="80"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        複数の項目を選択
+      </text>
+      <text
+        class="description"
+        x="120"
+        y="120"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        右クリックメニューを表示
+      </text>
+      <text
+        class="description"
+        x="120"
+        y="160"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        前のフィールドに移動
+      </text>
+      <text
+        class="description"
+        x="120"
+        y="200"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        行頭までを選択
+      </text>
+      <text
+        class="description"
+        x="120"
+        y="240"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        新しいフォルダを作成
+      </text>
+    </g>
+
+    <!-- Right column -->
+    <g transform="translate(450, 100)">
+      <text
+        class="shortcut"
+        x="0"
+        y="0"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#5C2D91"
+      >
+        F1
+      </text>
+      <text
+        class="shortcut"
+        x="0"
+        y="40"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#5C2D91"
+      >
+        F2
+      </text>
+      <text
+        class="shortcut"
+        x="0"
+        y="80"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#5C2D91"
+      >
+        F3
+      </text>
+      <text
+        class="shortcut"
+        x="0"
+        y="120"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#5C2D91"
+      >
+        F5
+      </text>
+      <text
+        class="shortcut"
+        x="0"
+        y="160"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#5C2D91"
+      >
+        F11
+      </text>
+      <text
+        class="shortcut"
+        x="0"
+        y="200"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#5C2D91"
+      >
+        Win + G
+      </text>
+      <text
+        class="shortcut"
+        x="0"
+        y="240"
+        font-family="'Segoe UI', monospace"
+        font-size="15"
+        font-weight="600"
+        fill="#5C2D91"
+      >
+        Win + ←/→
+      </text>
+
+      <text
+        class="description"
+        x="135"
+        y="0"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        ヘルプを表示
+      </text>
+      <text
+        class="description"
+        x="135"
+        y="40"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        選択したアイテムの名前を変更
+      </text>
+      <text
+        class="description"
+        x="135"
+        y="80"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        ファイル内検索
+      </text>
+      <text
+        class="description"
+        x="135"
+        y="120"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        更新/再読み込み
+      </text>
+      <text
+        class="description"
+        x="135"
+        y="160"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        全画面表示の切り替え
+      </text>
+      <text
+        class="description"
+        x="135"
+        y="200"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        ゲームバーを開く
+      </text>
+      <text
+        class="description"
+        x="135"
+        y="240"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="15"
+        fill="#334155"
+      >
+        ウィンドウを半分に配置
+      </text>
+    </g>
+  </g>
 </svg>
