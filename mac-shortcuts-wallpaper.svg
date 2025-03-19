@@ -1,1333 +1,2063 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
-  <!-- Definitions -->
-  <defs>
-    <!-- Background gradient -->
-    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#E8F5FE" />
-      <stop offset="100%" stop-color="#F8F9FA" />
-    </linearGradient>
-
-    <!-- Card gradients -->
-    <linearGradient id="cmd-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.1" />
-      <stop offset="100%" stop-color="#60A5FA" stop-opacity="0.05" />
-    </linearGradient>
-    <linearGradient id="opt-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#10B981" stop-opacity="0.1" />
-      <stop offset="100%" stop-color="#34D399" stop-opacity="0.05" />
-    </linearGradient>
-    <linearGradient id="ctrl-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#F97316" stop-opacity="0.1" />
-      <stop offset="100%" stop-color="#FB923C" stop-opacity="0.05" />
-    </linearGradient>
-    <linearGradient id="shift-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#A855F7" stop-opacity="0.1" />
-      <stop offset="100%" stop-color="#C084FC" stop-opacity="0.05" />
-    </linearGradient>
-
-    <!-- Shadow effects -->
-    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
-      <feDropShadow
-        dx="0"
-        dy="2"
-        stdDeviation="4"
-        flood-color="#000"
-        flood-opacity="0.1"
-      />
-    </filter>
-
-    <!-- Title shadow effect -->
-    <filter id="title-shadow" x="-5%" y="-5%" width="110%" height="120%">
-      <feDropShadow
-        dx="0"
-        dy="1"
-        stdDeviation="1"
-        flood-color="#0F172A"
-        flood-opacity="0.2"
-      />
-    </filter>
-  </defs>
-
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000">
   <!-- Background -->
-  <rect width="1920" height="1080" fill="url(#bg-gradient)" />
+  <rect width="1600" height="1000" fill="#f0f2f5" />
 
-  <!-- Subtle dot pattern -->
-  <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse">
-    <circle cx="2" cy="2" r="1" fill="#3B82F6" fill-opacity="0.1" />
+  <!-- Subtle Grid Pattern -->
+  <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+    <rect width="20" height="20" fill="#f0f2f5" />
+    <path
+      d="M 20 0 L 0 0 0 20"
+      fill="none"
+      stroke="#e6e9ef"
+      stroke-width="0.5"
+    />
   </pattern>
-  <rect width="1920" height="1080" fill="url(#dots)" />
+  <rect width="1600" height="1000" fill="url(#grid)" opacity="0.5" />
 
   <!-- Title -->
   <text
-    x="960"
-    y="80"
-    font-family="'SF Pro Display', 'Helvetica Neue', Arial, sans-serif"
-    font-size="52"
-    font-weight="700"
-    fill="#1E3A8A"
+    x="800"
+    y="70"
+    font-family="Helvetica, Arial, sans-serif"
+    font-size="40"
+    font-weight="bold"
     text-anchor="middle"
-    filter="url(#title-shadow)"
+    fill="#2c2c2c"
   >
-    Mac shortcut
+    Mac ショートカットキー総合一覧
   </text>
 
-  <!-- Command (⌘) Section -->
-  <g transform="translate(120, 150)">
+  <!-- Grid layout for categories -->
+  <!-- Column 1 -->
+  <g transform="translate(80, 120)">
+    <!-- Basic Operations -->
     <rect
-      width="810"
-      height="360"
-      rx="16"
-      ry="16"
-      fill="url(#cmd-gradient)"
-      filter="url(#shadow)"
-      stroke="#3B82F6"
+      x="0"
+      y="0"
+      width="360"
+      height="320"
+      rx="10"
+      ry="10"
+      fill="#ffffff"
+      stroke="#d0d0d0"
       stroke-width="2"
-      stroke-opacity="0.6"
+      filter="drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.1))"
     />
     <text
-      x="40"
-      y="50"
-      font-family="'SF Pro Display', Arial, sans-serif"
-      font-size="28"
-      font-weight="600"
-      fill="#2563EB"
+      x="180"
+      y="30"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="22"
+      font-weight="bold"
+      text-anchor="middle"
+      fill="#007aff"
     >
-      Command (⌘) キー
+      基本操作
+    </text>
+    <text
+      x="20"
+      y="70"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#007aff"
+    >
+      ⌘ + C:
+    </text>
+    <text
+      x="130"
+      y="70"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#007aff"
+    >
+      コピー
+    </text>
+    <text
+      x="20"
+      y="95"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#007aff"
+    >
+      ⌘ + X:
+    </text>
+    <text
+      x="130"
+      y="95"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      切り取り
+    </text>
+    <text
+      x="20"
+      y="120"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + V:
+    </text>
+    <text
+      x="130"
+      y="120"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      貼り付け
+    </text>
+    <text
+      x="20"
+      y="145"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + Z:
+    </text>
+    <text
+      x="130"
+      y="145"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      元に戻す
+    </text>
+    <text
+      x="20"
+      y="170"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + ⇧ + Z:
+    </text>
+    <text
+      x="130"
+      y="170"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      やり直す
+    </text>
+    <text
+      x="20"
+      y="195"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + A:
+    </text>
+    <text
+      x="130"
+      y="195"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      すべてを選択
+    </text>
+    <text
+      x="20"
+      y="220"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + F:
+    </text>
+    <text
+      x="130"
+      y="220"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      検索
+    </text>
+    <text
+      x="20"
+      y="245"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + S:
+    </text>
+    <text
+      x="130"
+      y="245"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      保存する
+    </text>
+    <text
+      x="20"
+      y="270"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + O:
+    </text>
+    <text
+      x="130"
+      y="270"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ファイルを開く
+    </text>
+    <text
+      x="20"
+      y="295"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + P:
+    </text>
+    <text
+      x="130"
+      y="295"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      印刷
     </text>
 
-    <!-- Left column -->
-    <g transform="translate(40, 100)">
-      <text
-        class="shortcut"
-        x="0"
-        y="0"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#1E40AF"
-      >
-        ⌘ + Space
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="40"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#1E40AF"
-      >
-        ⌘ + Q
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="80"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#1E40AF"
-      >
-        ⌘ + H
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="120"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#1E40AF"
-      >
-        ⌘ + M
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="160"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#1E40AF"
-      >
-        ⌘ + Tab
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="200"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#1E40AF"
-      >
-        ⌘ + W
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="240"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#1E40AF"
-      >
-        ⌘ + F
-      </text>
-
-      <text
-        class="description"
-        x="120"
-        y="0"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        Spotlight検索を開く
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="40"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        アプリケーションを終了
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="80"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        アプリケーションを隠す
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="120"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        ウインドウを最小化
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="160"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        アプリケーション切り替え
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="200"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        ウインドウを閉じる
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="240"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        検索
-      </text>
-    </g>
-
-    <!-- Right column -->
-    <g transform="translate(420, 100)">
-      <text
-        class="shortcut"
-        x="0"
-        y="0"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#1E40AF"
-      >
-        ⌘ + A
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="40"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#1E40AF"
-      >
-        ⌘ + C
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="80"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#1E40AF"
-      >
-        ⌘ + X
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="120"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#1E40AF"
-      >
-        ⌘ + V
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="160"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#1E40AF"
-      >
-        ⌘ + Z
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="200"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#1E40AF"
-      >
-        ⌘ + ⇧ + Z
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="240"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#1E40AF"
-      >
-        ⌘ + P
-      </text>
-
-      <text
-        class="description"
-        x="120"
-        y="0"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        すべてを選択
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="40"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        コピー
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="80"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        切り取り
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="120"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        貼り付け
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="160"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        元に戻す
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="200"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        やり直す
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="240"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        印刷
-      </text>
-    </g>
+    <!-- Window Management -->
+    <rect
+      x="0"
+      y="340"
+      width="360"
+      height="530"
+      rx="10"
+      ry="10"
+      fill="#ffffff"
+      stroke="#d0d0d0"
+      stroke-width="2"
+      filter="drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.1))"
+    />
+    <text
+      x="180"
+      y="370"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="22"
+      font-weight="bold"
+      text-anchor="middle"
+      fill="#007aff"
+    >
+      ウィンドウ・アプリ管理
+    </text>
+    <text
+      x="20"
+      y="410"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + Q:
+    </text>
+    <text
+      x="130"
+      y="410"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      アプリケーションを終了
+    </text>
+    <text
+      x="20"
+      y="435"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + W:
+    </text>
+    <text
+      x="130"
+      y="435"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ウインドウを閉じる
+    </text>
+    <text
+      x="20"
+      y="460"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + M:
+    </text>
+    <text
+      x="130"
+      y="460"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ウインドウを最小化
+    </text>
+    <text
+      x="20"
+      y="485"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + ⌥ + M:
+    </text>
+    <text
+      x="130"
+      y="485"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      すべてのウインドウを最小化
+    </text>
+    <text
+      x="20"
+      y="510"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + H:
+    </text>
+    <text
+      x="130"
+      y="510"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      アプリケーションを隠す
+    </text>
+    <text
+      x="20"
+      y="535"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + ⌥ + H:
+    </text>
+    <text
+      x="130"
+      y="535"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      他のアプリを隠す
+    </text>
+    <text
+      x="20"
+      y="560"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + Tab:
+    </text>
+    <text
+      x="130"
+      y="560"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      アプリケーション切り替え
+    </text>
+    <text
+      x="20"
+      y="585"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + N:
+    </text>
+    <text
+      x="130"
+      y="585"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      新規ウィンドウを開く
+    </text>
+    <text
+      x="20"
+      y="610"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + T:
+    </text>
+    <text
+      x="130"
+      y="610"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      新規タブを開く
+    </text>
+    <text
+      x="20"
+      y="635"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + ⌥ + W:
+    </text>
+    <text
+      x="130"
+      y="635"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      すべてのウインドウを閉じる
+    </text>
+    <text
+      x="20"
+      y="660"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + ⌥ + F:
+    </text>
+    <text
+      x="130"
+      y="660"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      全画面表示
+    </text>
+    <text
+      x="20"
+      y="685"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌃ + ⌘ + F:
+    </text>
+    <text
+      x="130"
+      y="685"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      フルスクリーン切り替え
+    </text>
+    <text
+      x="20"
+      y="710"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + ⌥ + esc:
+    </text>
+    <text
+      x="130"
+      y="710"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      強制終了ダイアログを表示
+    </text>
   </g>
 
-  <!-- Option (⌥) Section -->
-  <g transform="translate(990, 150)">
+  <!-- Column 2 -->
+  <g transform="translate(460, 120)">
+    <!-- Finder Operations -->
     <rect
-      width="810"
-      height="360"
-      rx="16"
-      ry="16"
-      fill="url(#opt-gradient)"
-      filter="url(#shadow)"
-      stroke="#10B981"
+      x="0"
+      y="0"
+      width="360"
+      height="530"
+      rx="10"
+      ry="10"
+      fill="#ffffff"
+      stroke="#d0d0d0"
       stroke-width="2"
-      stroke-opacity="0.6"
+      filter="drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.1))"
     />
     <text
-      x="40"
-      y="50"
-      font-family="'SF Pro Display', Arial, sans-serif"
-      font-size="28"
-      font-weight="600"
-      fill="#059669"
+      x="180"
+      y="30"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="22"
+      font-weight="bold"
+      text-anchor="middle"
+      fill="#333333"
     >
-      Option (⌥) キー
+      Finder 操作
+    </text>
+    <text
+      x="20"
+      y="70"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + ↑:
+    </text>
+    <text
+      x="130"
+      y="70"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      親フォルダへ移動
+    </text>
+    <text
+      x="20"
+      y="95"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + ↓:
+    </text>
+    <text
+      x="130"
+      y="95"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      選択したフォルダに入る
+    </text>
+    <text
+      x="20"
+      y="120"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + [:
+    </text>
+    <text
+      x="130"
+      y="120"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      戻る
+    </text>
+    <text
+      x="20"
+      y="145"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + ]:
+    </text>
+    <text
+      x="130"
+      y="145"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      進む
+    </text>
+    <text
+      x="20"
+      y="170"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + ⇧ + .:
+    </text>
+    <text
+      x="130"
+      y="170"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      隠しファイルの表示/非表示
+    </text>
+    <text
+      x="20"
+      y="195"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      スペースバー:
+    </text>
+    <text
+      x="130"
+      y="195"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      クイックルック
+    </text>
+    <text
+      x="20"
+      y="220"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + ⌥ + Y:
+    </text>
+    <text
+      x="130"
+      y="220"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      スライドショーでクイックルック
+    </text>
+    <text
+      x="20"
+      y="245"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + ⌥ + V:
+    </text>
+    <text
+      x="130"
+      y="245"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      「ここに移動」
+    </text>
+    <text
+      x="20"
+      y="270"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + ⌥ + N:
+    </text>
+    <text
+      x="130"
+      y="270"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      選択アイテムで新規フォルダ
+    </text>
+    <text
+      x="20"
+      y="295"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + Delete:
+    </text>
+    <text
+      x="130"
+      y="295"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ゴミ箱へ移動
+    </text>
+    <text
+      x="20"
+      y="320"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + ⇧ + Delete:
+    </text>
+    <text
+      x="130"
+      y="320"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ゴミ箱を空にする
+    </text>
+    <text
+      x="20"
+      y="345"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + ⌥ + .:
+    </text>
+    <text
+      x="130"
+      y="345"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      拡張子の表示/非表示
+    </text>
+    <text
+      x="20"
+      y="370"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌥ + ドラッグ:
+    </text>
+    <text
+      x="130"
+      y="370"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ファイルをコピー
+    </text>
+    <text
+      x="20"
+      y="395"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + ⇧ + N:
+    </text>
+    <text
+      x="130"
+      y="395"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      新規フォルダを作成
+    </text>
+    <text
+      x="20"
+      y="420"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + ⇧ + D:
+    </text>
+    <text
+      x="130"
+      y="420"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      デスクトップフォルダを開く
+    </text>
+    <text
+      x="20"
+      y="445"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + ⇧ + H:
+    </text>
+    <text
+      x="130"
+      y="445"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ホームフォルダを開く
+    </text>
+    <text
+      x="20"
+      y="470"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + ⇧ + G:
+    </text>
+    <text
+      x="130"
+      y="470"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      フォルダへ移動ダイアログ
+    </text>
+    <text
+      x="20"
+      y="495"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + ⇧ + C:
+    </text>
+    <text
+      x="130"
+      y="495"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      コンピュータウィンドウを開く
     </text>
 
-    <!-- Left column -->
-    <g transform="translate(40, 100)">
-      <text
-        class="shortcut"
-        x="0"
-        y="0"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#047857"
-      >
-        ⌥ + ⌘ + Esc
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="40"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#047857"
-      >
-        ⌥ + ⌘ + W
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="80"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#047857"
-      >
-        ⌥ (起動時)
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="120"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#047857"
-      >
-        ⌥ + ドラッグ
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="160"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#047857"
-      >
-        ⌥ + クリック
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="200"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#047857"
-      >
-        ⌥ + ⌘ + D
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="240"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#047857"
-      >
-        ⌥ + 削除
-      </text>
-
-      <text
-        class="description"
-        x="120"
-        y="0"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        強制終了ダイアログ
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="40"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        すべてのウインドウを閉じる
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="80"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        起動ディスクを選択
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="120"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        ファイルをコピー
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="160"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        追加オプションを表示
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="200"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        Dockの表示/非表示
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="240"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        前の単語を削除
-      </text>
-    </g>
-
-    <!-- Right column -->
-    <g transform="translate(420, 100)">
-      <text
-        class="shortcut"
-        x="0"
-        y="0"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#047857"
-      >
-        ⌥ + ⌘ + V
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="40"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#047857"
-      >
-        ⌥ + ⌘ + L
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="80"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#047857"
-      >
-        ⌥ + ⌘ + Y
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="120"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#047857"
-      >
-        ⌥ + ⌘ + H
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="160"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#047857"
-      >
-        ⌥ + ⌘ + F
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="200"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#047857"
-      >
-        ⌥ + ⌘ + S
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="240"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#047857"
-      >
-        ⌥ + ⌘ + P
-      </text>
-
-      <text
-        class="description"
-        x="120"
-        y="0"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        移動（貼り付け＆削除）
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="40"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        ダウンロードフォルダを開く
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="80"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        ライブラリフォルダを表示
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="120"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        他のアプリを隠す
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="160"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        全画面表示
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="200"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        別名で保存
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="240"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        ページ設定
-      </text>
-    </g>
+    <!-- System Operations -->
+    <rect
+      x="0"
+      y="550"
+      width="360"
+      height="320"
+      rx="10"
+      ry="10"
+      fill="#ffffff"
+      stroke="#d0d0d0"
+      stroke-width="2"
+      filter="drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.1))"
+    />
+    <text
+      x="180"
+      y="580"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="22"
+      font-weight="bold"
+      text-anchor="middle"
+      fill="#333333"
+    >
+      システム操作
+    </text>
+    <text
+      x="20"
+      y="620"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + スペース:
+    </text>
+    <text
+      x="130"
+      y="620"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      Spotlight 検索を開く
+    </text>
+    <text
+      x="20"
+      y="645"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌥ + ⌘ + スペース:
+    </text>
+    <text
+      x="130"
+      y="645"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      Finder 検索を開く
+    </text>
+    <text
+      x="20"
+      y="670"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + ⌥ + D:
+    </text>
+    <text
+      x="130"
+      y="670"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      Dock の表示/非表示
+    </text>
+    <text
+      x="20"
+      y="695"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      F11:
+    </text>
+    <text
+      x="130"
+      y="695"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      デスクトップを表示
+    </text>
+    <text
+      x="20"
+      y="720"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + +:
+    </text>
+    <text
+      x="130"
+      y="720"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ズームイン
+    </text>
+    <text
+      x="20"
+      y="745"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + -:
+    </text>
+    <text
+      x="130"
+      y="745"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ズームアウト
+    </text>
+    <text
+      x="20"
+      y="770"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌃ + ⌘ + Q:
+    </text>
+    <text
+      x="130"
+      y="770"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      画面をロック
+    </text>
+    <text
+      x="20"
+      y="795"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⇧ + ⌘ + Q:
+    </text>
+    <text
+      x="130"
+      y="795"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ログアウト
+    </text>
+    <text
+      x="20"
+      y="820"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌥ + クリック:
+    </text>
+    <text
+      x="130"
+      y="820"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      追加オプションを表示
+    </text>
   </g>
 
-  <!-- Control (⌃) Section -->
-  <g transform="translate(120, 550)">
+  <!-- Column 3 -->
+  <g transform="translate(840, 120)">
+    <!-- Text Editing -->
     <rect
-      width="810"
-      height="360"
-      rx="16"
-      ry="16"
-      fill="url(#ctrl-gradient)"
-      filter="url(#shadow)"
-      stroke="#F97316"
+      x="0"
+      y="0"
+      width="360"
+      height="530"
+      rx="10"
+      ry="10"
+      fill="#ffffff"
+      stroke="#d0d0d0"
       stroke-width="2"
-      stroke-opacity="0.6"
+      filter="drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.1))"
     />
     <text
-      x="40"
-      y="50"
-      font-family="'SF Pro Display', Arial, sans-serif"
-      font-size="28"
-      font-weight="600"
-      fill="#EA580C"
+      x="180"
+      y="30"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="22"
+      font-weight="bold"
+      text-anchor="middle"
+      fill="#333333"
     >
-      Control (⌃) キー
+      テキスト編集
+    </text>
+    <text
+      x="20"
+      y="70"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + B:
+    </text>
+    <text
+      x="130"
+      y="70"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      太字
+    </text>
+    <text
+      x="20"
+      y="95"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + I:
+    </text>
+    <text
+      x="130"
+      y="95"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      イタリック
+    </text>
+    <text
+      x="20"
+      y="120"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + U:
+    </text>
+    <text
+      x="130"
+      y="120"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      下線
+    </text>
+    <text
+      x="20"
+      y="145"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + ;:
+    </text>
+    <text
+      x="130"
+      y="145"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      スペルチェック
+    </text>
+    <text
+      x="20"
+      y="170"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + ⇧ + →:
+    </text>
+    <text
+      x="130"
+      y="170"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      行末まで選択
+    </text>
+    <text
+      x="20"
+      y="195"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + ⇧ + ←:
+    </text>
+    <text
+      x="130"
+      y="195"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      行頭まで選択
+    </text>
+    <text
+      x="20"
+      y="220"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + ⇧ + ↑:
+    </text>
+    <text
+      x="130"
+      y="220"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ドキュメントの先頭まで選択
+    </text>
+    <text
+      x="20"
+      y="245"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + ⇧ + ↓:
+    </text>
+    <text
+      x="130"
+      y="245"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ドキュメントの末尾まで選択
+    </text>
+    <text
+      x="20"
+      y="270"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌥ + ←:
+    </text>
+    <text
+      x="130"
+      y="270"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      単語単位で左に移動
+    </text>
+    <text
+      x="20"
+      y="295"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌥ + →:
+    </text>
+    <text
+      x="130"
+      y="295"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      単語単位で右に移動
+    </text>
+    <text
+      x="20"
+      y="320"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌃ + ⌘ + Space:
+    </text>
+    <text
+      x="130"
+      y="320"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      絵文字とシンボルピッカー
+    </text>
+    <text
+      x="20"
+      y="345"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + ⌥ + C:
+    </text>
+    <text
+      x="130"
+      y="345"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      スタイルをコピー
+    </text>
+    <text
+      x="20"
+      y="370"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + ⌥ + V:
+    </text>
+    <text
+      x="130"
+      y="370"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      スタイルを貼り付け
+    </text>
+    <text
+      x="20"
+      y="395"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌥ + 削除:
+    </text>
+    <text
+      x="130"
+      y="395"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      前の単語を削除
+    </text>
+    <text
+      x="20"
+      y="420"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌃ + D:
+    </text>
+    <text
+      x="130"
+      y="420"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      前方の文字を削除
+    </text>
+    <text
+      x="20"
+      y="445"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌃ + K:
+    </text>
+    <text
+      x="130"
+      y="445"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      カーソルから行末まで削除
+    </text>
+    <text
+      x="20"
+      y="470"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌃ + A:
+    </text>
+    <text
+      x="130"
+      y="470"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      行頭へ移動
+    </text>
+    <text
+      x="20"
+      y="495"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌃ + E:
+    </text>
+    <text
+      x="130"
+      y="495"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      行末へ移動
     </text>
 
-    <!-- Left column -->
-    <g transform="translate(40, 100)">
-      <text
-        class="shortcut"
-        x="0"
-        y="0"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#C2410C"
-      >
-        ⌃ + クリック
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="40"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#C2410C"
-      >
-        ⌃ + ⌘ + Space
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="80"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#C2410C"
-      >
-        ⌃ + D
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="120"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#C2410C"
-      >
-        ⌃ + K
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="160"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#C2410C"
-      >
-        ⌃ + A
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="200"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#C2410C"
-      >
-        ⌃ + E
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="240"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#C2410C"
-      >
-        ⌃ + O
-      </text>
-
-      <text
-        class="description"
-        x="120"
-        y="0"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        右クリックメニュー
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="40"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        絵文字と記号
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="80"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        前方の文字を削除
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="120"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        カーソルから行末まで削除
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="160"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        行頭へ移動
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="200"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        行末へ移動
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="240"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        改行を挿入
-      </text>
-    </g>
-
-    <!-- Right column -->
-    <g transform="translate(420, 100)">
-      <text
-        class="shortcut"
-        x="0"
-        y="0"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#C2410C"
-      >
-        ⌃ + F
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="40"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#C2410C"
-      >
-        ⌃ + B
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="80"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#C2410C"
-      >
-        ⌃ + P
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="120"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#C2410C"
-      >
-        ⌃ + N
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="160"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#C2410C"
-      >
-        ⌃ + ⌘ + Q
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="200"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#C2410C"
-      >
-        ⌃ + Tab
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="240"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#C2410C"
-      >
-        ⌃ + ⇧ + Tab
-      </text>
-
-      <text
-        class="description"
-        x="120"
-        y="0"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        一文字進む
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="40"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        一文字戻る
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="80"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        上へ移動
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="120"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        下へ移動
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="160"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        画面をロック
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="200"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        ブラウザで次のタブへ移動
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="240"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        ブラウザで前のタブへ移動
-      </text>
-    </g>
+    <!-- Screenshots & Browser -->
+    <rect
+      x="0"
+      y="550"
+      width="360"
+      height="320"
+      rx="10"
+      ry="10"
+      fill="#ffffff"
+      stroke="#d0d0d0"
+      stroke-width="2"
+      filter="drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.1))"
+    />
+    <text
+      x="180"
+      y="580"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="22"
+      font-weight="bold"
+      text-anchor="middle"
+      fill="#333333"
+    >
+      スクリーンショット・ブラウザ
+    </text>
+    <text
+      x="20"
+      y="620"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⇧ + ⌘ + 3:
+    </text>
+    <text
+      x="130"
+      y="620"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      画面全体のスクリーンショット
+    </text>
+    <text
+      x="20"
+      y="645"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⇧ + ⌘ + 4:
+    </text>
+    <text
+      x="130"
+      y="645"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      範囲選択スクリーンショット
+    </text>
+    <text
+      x="20"
+      y="670"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⇧ + ⌘ + 5:
+    </text>
+    <text
+      x="130"
+      y="670"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      スクリーンショットコントロール
+    </text>
+    <text
+      x="20"
+      y="710"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + R:
+    </text>
+    <text
+      x="130"
+      y="710"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ページを更新
+    </text>
+    <text
+      x="20"
+      y="735"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⇧ + ⌘ + T:
+    </text>
+    <text
+      x="130"
+      y="735"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      最後に閉じたタブを復元
+    </text>
+    <text
+      x="20"
+      y="760"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⇧ + ⌘ + F:
+    </text>
+    <text
+      x="130"
+      y="760"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      すべてを選択して検索
+    </text>
+    <text
+      x="20"
+      y="785"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌃ + Tab:
+    </text>
+    <text
+      x="130"
+      y="785"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      次のタブへ移動
+    </text>
+    <text
+      x="20"
+      y="810"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌃ + ⇧ + Tab:
+    </text>
+    <text
+      x="130"
+      y="810"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      前のタブへ移動
+    </text>
   </g>
 
-  <!-- Shift & System Section -->
-  <g transform="translate(990, 550)">
+  <!-- Column 4 -->
+  <g transform="translate(1220, 120)">
+    <!-- Power Related -->
     <rect
-      width="810"
-      height="360"
-      rx="16"
-      ry="16"
-      fill="url(#shift-gradient)"
-      filter="url(#shadow)"
-      stroke="#A855F7"
+      x="0"
+      y="0"
+      width="360"
+      height="200"
+      rx="10"
+      ry="10"
+      fill="#ffffff"
+      stroke="#d0d0d0"
       stroke-width="2"
-      stroke-opacity="0.6"
+      filter="drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.1))"
+    />
+    <text
+      x="180"
+      y="30"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="22"
+      font-weight="bold"
+      text-anchor="middle"
+      fill="#333333"
+    >
+      電源関連
+    </text>
+    <text
+      x="20"
+      y="70"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      電源ボタン:
+    </text>
+    <text
+      x="160"
+      y="70"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      スリープ
+    </text>
+    <text
+      x="20"
+      y="95"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + 電源ボタン:
+    </text>
+    <text
+      x="160"
+      y="95"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      再起動・シャットダウン
+    </text>
+    <text
+      x="20"
+      y="120"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + ⌃ + 電源ボタン:
+    </text>
+    <text
+      x="160"
+      y="120"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      強制再起動
+    </text>
+    <text
+      x="20"
+      y="145"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌃ + ⌥ + ⌘ + パワーボタン:
+    </text>
+    <text
+      x="160"
+      y="145"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      Mac 強制終了
+    </text>
+
+    <!-- Boot Related -->
+    <rect
+      x="0"
+      y="220"
+      width="360"
+      height="330"
+      rx="10"
+      ry="10"
+      fill="#ffffff"
+      stroke="#d0d0d0"
+      stroke-width="2"
+      filter="drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.1))"
+    />
+    <text
+      x="180"
+      y="250"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="22"
+      font-weight="bold"
+      text-anchor="middle"
+      fill="#333333"
+    >
+      起動関連
+    </text>
+    <text
+      x="20"
+      y="290"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      起動時に ⌘ + R:
+    </text>
+    <text
+      x="160"
+      y="290"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      macOS リカバリーモード
+    </text>
+    <text
+      x="20"
+      y="315"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      起動時に ⌘ + ⌥ + R:
+    </text>
+    <text
+      x="160"
+      y="315"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      インターネットリカバリー
+    </text>
+    <text
+      x="20"
+      y="340"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      起動時に ⌘ + S:
+    </text>
+    <text
+      x="160"
+      y="340"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      シングルユーザーモード
+    </text>
+    <text
+      x="20"
+      y="365"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      起動時に ⌘ + V:
+    </text>
+    <text
+      x="160"
+      y="365"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      詳細表示モード
+    </text>
+    <text
+      x="20"
+      y="390"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      起動時に ⌥:
+    </text>
+    <text
+      x="160"
+      y="390"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      起動ディスクを選択
+    </text>
+    <text
+      x="20"
+      y="415"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + ⌥ + P + R (起動時):
+    </text>
+    <text
+      x="160"
+      y="415"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      NVRAM リセット
+    </text>
+
+    <!-- Key Symbols Legend -->
+    <rect
+      x="0"
+      y="570"
+      width="360"
+      height="300"
+      rx="10"
+      ry="10"
+      fill="#ffffff"
+      stroke="#d0d0d0"
+      stroke-width="2"
+      filter="drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.1))"
+    />
+    <text
+      x="180"
+      y="600"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="22"
+      font-weight="bold"
+      text-anchor="middle"
+      fill="#333333"
+    >
+      キー記号一覧
+    </text>
+
+    <rect
+      x="20"
+      y="630"
+      width="40"
+      height="40"
+      rx="5"
+      ry="5"
+      fill="#f5f7fa"
+      stroke="#c0c0c0"
+      stroke-width="1"
     />
     <text
       x="40"
-      y="50"
-      font-family="'SF Pro Display', Arial, sans-serif"
-      font-size="28"
-      font-weight="600"
-      fill="#9333EA"
+      y="657"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="18"
+      text-anchor="middle"
+      fill="#333333"
     >
-      Shift (⇧) キー＆その他
+      ⌘
+    </text>
+    <text
+      x="80"
+      y="657"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="16"
+      fill="#333333"
+    >
+      Command
     </text>
 
-    <!-- Left column -->
-    <g transform="translate(40, 100)">
-      <text
-        class="shortcut"
-        x="0"
-        y="0"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#7E22CE"
-      >
-        ⇧ + ⌘ + 3
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="40"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#7E22CE"
-      >
-        ⇧ + ⌘ + 4
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="80"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#7E22CE"
-      >
-        ⇧ + ⌘ + 5
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="120"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#7E22CE"
-      >
-        ⇧ + ⌘ + N
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="160"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#7E22CE"
-      >
-        ⇧ + ⌘ + Q
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="200"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#7E22CE"
-      >
-        ⇧ + ⌘ + T
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="240"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#7E22CE"
-      >
-        ⇧ + ⌘ + F
-      </text>
+    <rect
+      x="20"
+      y="680"
+      width="40"
+      height="40"
+      rx="5"
+      ry="5"
+      fill="#f5f7fa"
+      stroke="#c0c0c0"
+      stroke-width="1"
+    />
+    <text
+      x="40"
+      y="707"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="18"
+      text-anchor="middle"
+      fill="#333333"
+    >
+      ⌥
+    </text>
+    <text
+      x="80"
+      y="707"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="16"
+      fill="#333333"
+    >
+      Option (Alt)
+    </text>
 
-      <text
-        class="description"
-        x="120"
-        y="0"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        画面全体のスクリーンショット
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="40"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        範囲選択スクリーンショット
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="80"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        スクリーンショットコントロール
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="120"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        新規フォルダを作成
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="160"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        ログアウト
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="200"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        最後に閉じたタブを復元
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="240"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        すべてを選択して検索
-      </text>
-    </g>
+    <rect
+      x="20"
+      y="730"
+      width="40"
+      height="40"
+      rx="5"
+      ry="5"
+      fill="#f5f7fa"
+      stroke="#c0c0c0"
+      stroke-width="1"
+    />
+    <text
+      x="40"
+      y="757"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="18"
+      text-anchor="middle"
+      fill="#333333"
+    >
+      ⇧
+    </text>
+    <text
+      x="80"
+      y="757"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="16"
+      fill="#333333"
+    >
+      Shift
+    </text>
 
-    <!-- Right column -->
-    <g transform="translate(420, 100)">
-      <text
-        class="shortcut"
-        x="0"
-        y="0"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#7E22CE"
-      >
-        F11
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="40"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#7E22CE"
-      >
-        ⌘ + ⌥ + D
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="80"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#7E22CE"
-      >
-        ⌘ + スペース
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="120"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#7E22CE"
-      >
-        ⌘ + ⌥ + M
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="160"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#7E22CE"
-      >
-        ⌘ + +
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="200"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#7E22CE"
-      >
-        ⌘ + -
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="240"
-        font-family="'SF Pro Text', monospace"
-        font-size="15"
-        fill="#7E22CE"
-      >
-        電源ボタン
-      </text>
+    <rect
+      x="20"
+      y="780"
+      width="40"
+      height="40"
+      rx="5"
+      ry="5"
+      fill="#f5f7fa"
+      stroke="#c0c0c0"
+      stroke-width="1"
+    />
+    <text
+      x="40"
+      y="807"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="18"
+      text-anchor="middle"
+      fill="#333333"
+    >
+      ⌃
+    </text>
+    <text
+      x="80"
+      y="807"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="16"
+      fill="#333333"
+    >
+      Control
+    </text>
 
-      <text
-        class="description"
-        x="120"
-        y="0"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        デスクトップを表示
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="40"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        Dockの自動隠す設定
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="80"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        Spotlight検索
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="120"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        すべてのウインドウを最小化
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="160"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        ズームイン
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="200"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        ズームアウト
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="240"
-        font-family="'SF Pro Text', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        スリープ
-      </text>
-    </g>
+    <rect
+      x="200"
+      y="630"
+      width="40"
+      height="40"
+      rx="5"
+      ry="5"
+      fill="#f5f7fa"
+      stroke="#c0c0c0"
+      stroke-width="1"
+    />
+    <text
+      x="220"
+      y="657"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="18"
+      text-anchor="middle"
+      fill="#333333"
+    >
+      ↑
+    </text>
+    <text
+      x="260"
+      y="657"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="16"
+      fill="#333333"
+    >
+      上矢印
+    </text>
+
+    <rect
+      x="200"
+      y="680"
+      width="40"
+      height="40"
+      rx="5"
+      ry="5"
+      fill="#f5f7fa"
+      stroke="#c0c0c0"
+      stroke-width="1"
+    />
+    <text
+      x="220"
+      y="707"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="18"
+      text-anchor="middle"
+      fill="#333333"
+    >
+      ↓
+    </text>
+    <text
+      x="260"
+      y="707"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="16"
+      fill="#333333"
+    >
+      下矢印
+    </text>
+
+    <rect
+      x="200"
+      y="730"
+      width="40"
+      height="40"
+      rx="5"
+      ry="5"
+      fill="#f5f7fa"
+      stroke="#c0c0c0"
+      stroke-width="1"
+    />
+    <text
+      x="220"
+      y="757"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="18"
+      text-anchor="middle"
+      fill="#333333"
+    >
+      ←
+    </text>
+    <text
+      x="260"
+      y="757"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="16"
+      fill="#333333"
+    >
+      左矢印
+    </text>
+
+    <rect
+      x="200"
+      y="780"
+      width="40"
+      height="40"
+      rx="5"
+      ry="5"
+      fill="#f5f7fa"
+      stroke="#c0c0c0"
+      stroke-width="1"
+    />
+    <text
+      x="220"
+      y="807"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="18"
+      text-anchor="middle"
+      fill="#333333"
+    >
+      →
+    </text>
+    <text
+      x="260"
+      y="807"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="16"
+      fill="#333333"
+    >
+      右矢印
+    </text>
   </g>
 </svg>
