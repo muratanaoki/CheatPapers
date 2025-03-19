@@ -920,7 +920,7 @@
         font-size="15"
         fill="#C2410C"
       >
-        ⌃ + ⇧ + 電源
+        ⌃ + ⌘ + Q
       </text>
       <text
         class="shortcut"
@@ -930,7 +930,7 @@
         font-size="15"
         fill="#C2410C"
       >
-        ⌘ + ⌃ + 電源
+        ⌃ + Tab
       </text>
       <text
         class="shortcut"
@@ -940,7 +940,7 @@
         font-size="15"
         fill="#C2410C"
       >
-        ⌘ + ,
+        ⌃ + ⇧ + Tab
       </text>
 
       <text
@@ -1001,7 +1001,7 @@
         font-size="15"
         fill="#334155"
       >
-        再起動
+        ブラウザで次のタブへ移動
       </text>
       <text
         class="description"
@@ -1011,7 +1011,7 @@
         font-size="15"
         fill="#334155"
       >
-        システム環境設定を開く
+        ブラウザで前のタブへ移動
       </text>
     </g>
   </g>
@@ -1037,7 +1037,7 @@
       font-weight="600"
       fill="#9333EA"
     >
-      Shift (⇧) キー＆システム
+      Shift (⇧) キー＆その他
     </text>
 
     <!-- Left column -->
