@@ -29,7 +29,7 @@
 
   <!-- Grid layout for categories -->
   <!-- Column 1 -->
-  <g transform="translate(80, 120)">
+  <g transform="translate(50, 120)">
     <!-- Basic Operations -->
     <rect
       x="0"
@@ -496,7 +496,7 @@
   </g>
 
   <!-- Column 2 -->
-  <g transform="translate(460, 120)">
+  <g transform="translate(430, 120)">
     <!-- Finder Operations -->
     <rect
       x="0"
@@ -1035,7 +1035,7 @@
   </g>
 
   <!-- Column 3 -->
-  <g transform="translate(840, 120)">
+  <g transform="translate(810, 120)">
     <!-- Text Editing -->
     <rect
       x="0"
@@ -1556,7 +1556,7 @@
   </g>
 
   <!-- Column 4 -->
-  <g transform="translate(1220, 120)">
+  <g transform="translate(1190, 120)">
     <!-- Power Related -->
     <rect
       x="0"
@@ -1591,7 +1591,7 @@
       電源ボタン:
     </text>
     <text
-      x="160"
+      x="130"
       y="70"
       font-family="Helvetica, Arial, sans-serif"
       font-size="14"
@@ -1609,7 +1609,7 @@
       ⌘ + 電源ボタン:
     </text>
     <text
-      x="160"
+      x="130"
       y="95"
       font-family="Helvetica, Arial, sans-serif"
       font-size="14"
@@ -1627,7 +1627,7 @@
       ⌘ + ⌃ + 電源ボタン:
     </text>
     <text
-      x="160"
+      x="130"
       y="120"
       font-family="Helvetica, Arial, sans-serif"
       font-size="14"
@@ -1645,7 +1645,7 @@
       ⌃ + ⌥ + ⌘ + パワーボタン:
     </text>
     <text
-      x="160"
+      x="130"
       y="145"
       font-family="Helvetica, Arial, sans-serif"
       font-size="14"
@@ -1659,7 +1659,7 @@
       x="0"
       y="220"
       width="360"
-      height="330"
+      height="310"
       rx="10"
       ry="10"
       fill="#ffffff"
@@ -1688,7 +1688,7 @@
       起動時に ⌘ + R:
     </text>
     <text
-      x="160"
+      x="130"
       y="290"
       font-family="Helvetica, Arial, sans-serif"
       font-size="14"
@@ -1706,7 +1706,7 @@
       起動時に ⌘ + ⌥ + R:
     </text>
     <text
-      x="160"
+      x="130"
       y="315"
       font-family="Helvetica, Arial, sans-serif"
       font-size="14"
@@ -1724,7 +1724,7 @@
       起動時に ⌘ + S:
     </text>
     <text
-      x="160"
+      x="130"
       y="340"
       font-family="Helvetica, Arial, sans-serif"
       font-size="14"
@@ -1742,7 +1742,7 @@
       起動時に ⌘ + V:
     </text>
     <text
-      x="160"
+      x="130"
       y="365"
       font-family="Helvetica, Arial, sans-serif"
       font-size="14"
@@ -1760,7 +1760,7 @@
       起動時に ⌥:
     </text>
     <text
-      x="160"
+      x="130"
       y="390"
       font-family="Helvetica, Arial, sans-serif"
       font-size="14"
@@ -1778,7 +1778,7 @@
       ⌘ + ⌥ + P + R (起動時):
     </text>
     <text
-      x="160"
+      x="130"
       y="415"
       font-family="Helvetica, Arial, sans-serif"
       font-size="14"
@@ -1790,9 +1790,9 @@
     <!-- Key Symbols Legend -->
     <rect
       x="0"
-      y="570"
+      y="550"
       width="360"
-      height="300"
+      height="320"
       rx="10"
       ry="10"
       fill="#ffffff"
@@ -1802,7 +1802,7 @@
     />
     <text
       x="180"
-      y="600"
+      y="590"
       font-family="Helvetica, Arial, sans-serif"
       font-size="22"
       font-weight="bold"
