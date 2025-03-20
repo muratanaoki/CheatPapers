@@ -1447,24 +1447,6 @@
     </text>
     <text
       x="20"
-      y="710"
-      font-family="Helvetica, Arial, sans-serif"
-      font-size="14"
-      fill="#333333"
-    >
-      ⌘ + R：
-    </text>
-    <text
-      x="150"
-      y="710"
-      font-family="Helvetica, Arial, sans-serif"
-      font-size="14"
-      fill="#333333"
-    >
-      ページを更新
-    </text>
-    <text
-      x="20"
       y="735"
       font-family="Helvetica, Arial, sans-serif"
       font-size="14"
@@ -1534,6 +1516,24 @@
       fill="#333333"
     >
       前のタブへ移動
+    </text>
+    <text
+      x="20"
+      y="835"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ⌘ + R：
+    </text>
+    <text
+      x="150"
+      y="835"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="14"
+      fill="#333333"
+    >
+      ページを更新
     </text>
   </g>
 
