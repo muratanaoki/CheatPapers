@@ -1798,7 +1798,7 @@
     />
     <text
       x="180"
-      y="590"
+      y="580"
       font-family="Helvetica, Arial, sans-serif"
       font-size="22"
       font-weight="bold"
@@ -1810,7 +1810,7 @@
 
     <rect
       x="20"
-      y="630"
+      y="610"
       width="40"
       height="40"
       rx="5"
@@ -1821,7 +1821,7 @@
     />
     <text
       x="40"
-      y="657"
+      y="637"
       font-family="Helvetica, Arial, sans-serif"
       font-size="18"
       text-anchor="middle"
@@ -1831,7 +1831,7 @@
     </text>
     <text
       x="80"
-      y="657"
+      y="637"
       font-family="Helvetica, Arial, sans-serif"
       font-size="16"
       fill="#333333"
@@ -1841,7 +1841,7 @@
 
     <rect
       x="20"
-      y="680"
+      y="660"
       width="40"
       height="40"
       rx="5"
@@ -1852,7 +1852,7 @@
     />
     <text
       x="40"
-      y="707"
+      y="687"
       font-family="Helvetica, Arial, sans-serif"
       font-size="18"
       text-anchor="middle"
@@ -1862,7 +1862,7 @@
     </text>
     <text
       x="80"
-      y="707"
+      y="687"
       font-family="Helvetica, Arial, sans-serif"
       font-size="16"
       fill="#333333"
@@ -1872,7 +1872,7 @@
 
     <rect
       x="20"
-      y="730"
+      y="710"
       width="40"
       height="40"
       rx="5"
@@ -1883,7 +1883,7 @@
     />
     <text
       x="40"
-      y="757"
+      y="737"
       font-family="Helvetica, Arial, sans-serif"
       font-size="18"
       text-anchor="middle"
@@ -1893,7 +1893,7 @@
     </text>
     <text
       x="80"
-      y="757"
+      y="737"
       font-family="Helvetica, Arial, sans-serif"
       font-size="16"
       fill="#333333"
@@ -1903,7 +1903,7 @@
 
     <rect
       x="20"
-      y="780"
+      y="760"
       width="40"
       height="40"
       rx="5"
@@ -1914,7 +1914,7 @@
     />
     <text
       x="40"
-      y="807"
+      y="787"
       font-family="Helvetica, Arial, sans-serif"
       font-size="18"
       text-anchor="middle"
@@ -1924,7 +1924,7 @@
     </text>
     <text
       x="80"
-      y="807"
+      y="787"
       font-family="Helvetica, Arial, sans-serif"
       font-size="16"
       fill="#333333"
@@ -1934,7 +1934,7 @@
 
     <rect
       x="200"
-      y="630"
+      y="610"
       width="40"
       height="40"
       rx="5"
@@ -1945,7 +1945,7 @@
     />
     <text
       x="220"
-      y="657"
+      y="637"
       font-family="Helvetica, Arial, sans-serif"
       font-size="18"
       text-anchor="middle"
@@ -1955,7 +1955,7 @@
     </text>
     <text
       x="260"
-      y="657"
+      y="637"
       font-family="Helvetica, Arial, sans-serif"
       font-size="16"
       fill="#333333"
@@ -1965,7 +1965,7 @@
 
     <rect
       x="200"
-      y="680"
+      y="660"
       width="40"
       height="40"
       rx="5"
@@ -1976,7 +1976,7 @@
     />
     <text
       x="220"
-      y="707"
+      y="687"
       font-family="Helvetica, Arial, sans-serif"
       font-size="18"
       text-anchor="middle"
@@ -1986,7 +1986,7 @@
     </text>
     <text
       x="260"
-      y="707"
+      y="687"
       font-family="Helvetica, Arial, sans-serif"
       font-size="16"
       fill="#333333"
@@ -1996,7 +1996,7 @@
 
     <rect
       x="200"
-      y="730"
+      y="710"
       width="40"
       height="40"
       rx="5"
@@ -2007,7 +2007,7 @@
     />
     <text
       x="220"
-      y="757"
+      y="737"
       font-family="Helvetica, Arial, sans-serif"
       font-size="18"
       text-anchor="middle"
@@ -2017,7 +2017,7 @@
     </text>
     <text
       x="260"
-      y="757"
+      y="737"
       font-family="Helvetica, Arial, sans-serif"
       font-size="16"
       fill="#333333"
@@ -2027,7 +2027,7 @@
 
     <rect
       x="200"
-      y="780"
+      y="760"
       width="40"
       height="40"
       rx="5"
@@ -2038,7 +2038,7 @@
     />
     <text
       x="220"
-      y="807"
+      y="787"
       font-family="Helvetica, Arial, sans-serif"
       font-size="18"
       text-anchor="middle"
@@ -2048,7 +2048,7 @@
     </text>
     <text
       x="260"
-      y="807"
+      y="787"
       font-family="Helvetica, Arial, sans-serif"
       font-size="16"
       fill="#333333"
