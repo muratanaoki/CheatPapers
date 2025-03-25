@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SVGからJPGへの変換ツール（シンプル版）</title>
+    <style>
+      body {
+        font-family: "Segoe UI", "Hiragino Sans", sans-serif;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f5f5f5;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        background-color: white;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      }
+      .header {
+        border-bottom: 1px solid #eee;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+        text-align: center;
+      }
+      .header h1 {
+        margin: 0;
+        color: #2d8cff;
+      }
+      .drop-area {
+        border: 3px dashed #ccc;
+        border-radius: 12px;
+        padding: 40px 20px;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.3s;
+        background-color: #f9fbff;
+      }
+      .drop-area:hover,
+      .drop-area.active {
+        border-color: #2d8cff;
+        background-color: #eef5ff;
+      }
+      .drop-area p {
+        margin: 10px 0;
+        color: #666;
+      }
+      .drop-area h2 {
+        color: #2d8cff;
+        margin-top: 0;
+      }
+      .preview-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      .preview-box {
+        border: 1px solid #eee;
+        border-radius: 12px;
+        padding: 20px;
+        width: 100%;
+        background-color: white;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+      }
+      .preview-box h3 {
+        margin-top: 0;
+        color: #2d8cff;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 10px;
+      }
+      .svg-preview,
+      .jpg-preview {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+        display: block;
+        margin: 0 auto;
+      }
+      .controls {
+        margin: 20px 0 0;
+        display: flex;
+        justify-content: center;
+      }
+      .button {
+        background-color: #2d8cff;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 600;
+        transition: background-color 0.3s;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+      .button:hover {
+        background-color: #1a6ed5;
+      }
+      .button:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+      }
+      .button svg {
+        width: 20px;
+        height: 20px;
+      }
+      .info-text {
+        text-align: center;
+        color: #666;
+        font-size: 14px;
+        margin: 0;
+      }
+      .status-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15px;
+      }
+      .compression-toggle {
+        margin: 20px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .toggle-switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+        margin: 0 10px;
+      }
+      .toggle-switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+      .toggle-slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: 0.4s;
+        border-radius: 34px;
+      }
+      .toggle-slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        transition: 0.4s;
+        border-radius: 50%;
+      }
+      input:checked + .toggle-slider {
+        background-color: #2d8cff;
+      }
+      input:checked + .toggle-slider:before {
+        transform: translateX(26px);
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>SVG → JPG 変換ツール</h1>
+        <p class="info-text">
+          SVGファイルを元のサイズどおりに最高品質のJPGに変換します
+        </p>
+      </div>
+
+      <div id="dropArea" class="drop-area">
+        <h2>SVGファイルをここに置く</h2>
+        <p>ファイルをドラッグ＆ドロップするか、クリックして選択</p>
+        <input type="file" id="fileInput" accept=".svg" class="hidden" />
+      </div>
+
+      <div class="compression-toggle">
+        <span>データ圧縮</span>
+        <label class="toggle-switch">
+          <input type="checkbox" id="compressionToggle" checked />
+          <span class="toggle-slider"></span>
+        </label>
+        <span>有効</span>
+      </div>
+
+      <div class="preview-container">
+        <div id="svgPreviewContainer" class="preview-box" style="display: none">
+          <h3>SVGプレビュー</h3>
+          <div id="svgPreview"></div>
+          <div class="status-container">
+            <p id="svgInfo" class="info-text"></p>
+            <button id="convertBtn" class="button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="1 4 1 10 7 10"></polyline>
+                <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+              </svg>
+              JPGに変換する
+            </button>
+          </div>
+        </div>
+
+        <div id="jpgPreviewContainer" class="preview-box" style="display: none">
+          <h3>JPG変換結果</h3>
+          <img id="jpgPreview" class="jpg-preview" />
+          <div class="status-container">
+            <p id="jpgInfo" class="info-text"></p>
+            <div class="controls">
+              <button id="downloadBtn" class="button" disabled>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                JPGをダウンロード
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // DOM要素の取得
+      const dropArea = document.getElementById("dropArea");
+      const fileInput = document.getElementById("fileInput");
+      const svgPreviewContainer = document.getElementById(
+        "svgPreviewContainer"
+      );
+      const jpgPreviewContainer = document.getElementById(
+        "jpgPreviewContainer"
+      );
+      const svgPreview = document.getElementById("svgPreview");
+      const jpgPreview = document.getElementById("jpgPreview");
+      const downloadBtn = document.getElementById("downloadBtn");
+      const convertBtn = document.getElementById("convertBtn");
+      const svgInfo = document.getElementById("svgInfo");
+      const jpgInfo = document.getElementById("jpgInfo");
+      const compressionToggle = document.getElementById("compressionToggle");
+
+      let svgContent = null;
+      let svgFile = null;
+      let jpgBlob = null;
+      let originalWidth = 0;
+      let originalHeight = 0;
+
+      // ドラッグ&ドロップイベントの設定
+      ["dragenter", "dragover", "dragleave", "drop"].forEach((eventName) => {
+        dropArea.addEventListener(eventName, preventDefaults, false);
+      });
+
+      function preventDefaults(e) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+
+      ["dragenter", "dragover"].forEach((eventName) => {
+        dropArea.addEventListener(eventName, () => {
+          dropArea.classList.add("active");
+        });
+      });
+
+      ["dragleave", "drop"].forEach((eventName) => {
+        dropArea.addEventListener(eventName, () => {
+          dropArea.classList.remove("active");
+        });
+      });
+
+      // ファイルドロップ処理
+      dropArea.addEventListener("drop", handleDrop);
+
+      function handleDrop(e) {
+        const dt = e.dataTransfer;
+        const files = dt.files;
+        handleFiles(files);
+      }
+
+      // クリックで選択
+      dropArea.addEventListener("click", () => {
+        fileInput.click();
+      });
+
+      fileInput.addEventListener("change", function () {
+        handleFiles(this.files);
+      });
+
+      // ファイル処理
+      function handleFiles(files) {
+        if (files.length > 0) {
+          const file = files[0];
+          if (
+            file.type === "image/svg+xml" ||
+            file.name.toLowerCase().endsWith(".svg")
+          ) {
+            svgFile = file;
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+              svgContent = e.target.result;
+              displaySvgPreview(svgContent);
+            };
+
+            reader.readAsText(file);
+          } else {
+            alert("SVGファイルを選択してください");
+          }
+        }
+      }
+
+      // SVGプレビュー表示
+      function displaySvgPreview(svgContent) {
+        svgPreview.innerHTML = svgContent;
+        svgPreviewContainer.style.display = "block";
+
+        // SVGの元のサイズを取得して表示
+        const svgElement = svgPreview.querySelector("svg");
+
+        if (
+          svgElement.getAttribute("width") &&
+          svgElement.getAttribute("height")
+        ) {
+          originalWidth = parseFloat(svgElement.getAttribute("width"));
+          originalHeight = parseFloat(svgElement.getAttribute("height"));
+        } else if (svgElement.getAttribute("viewBox")) {
+          const viewBox = svgElement.getAttribute("viewBox").split(/[\s,]+/);
+          originalWidth = parseFloat(viewBox[2]);
+          originalHeight = parseFloat(viewBox[3]);
+        } else {
+          originalWidth = 800;
+          originalHeight = 600;
+        }
+
+        svgInfo.textContent = `元のサイズ: ${Math.round(
+          originalWidth
+        )} × ${Math.round(originalHeight)} px`;
+
+        // プレビューで表示サイズを調整
+        const maxPreviewWidth = svgPreviewContainer.clientWidth - 40; // 余白を考慮
+        if (originalWidth > maxPreviewWidth) {
+          const scale = maxPreviewWidth / originalWidth;
+          svgElement.style.width = `${maxPreviewWidth}px`;
+          svgElement.style.height = `${originalHeight * scale}px`;
+        }
+      }
+
+      // 変換ボタンクリック
+      convertBtn.addEventListener("click", convertSvgToJpg);
+
+      // SVGからJPGへの変換
+      function convertSvgToJpg() {
+        if (!svgContent) return;
+
+        // 元のサイズを使用
+        const width = originalWidth;
+        const height = originalHeight;
+
+        // 最高品質（圧縮の有無によって調整）
+        const isCompressed = compressionToggle.checked;
+        const quality = isCompressed ? 0.9 : 1.0;
+
+        // SVG要素のクローンを作成
+        const svgElement = svgPreview.querySelector("svg").cloneNode(true);
+
+        // キャンバスを作成
+        const canvas = document.createElement("canvas");
+        const ctx = canvas.getContext("2d");
+
+        // キャンバスサイズを設定
+        canvas.width = width;
+        canvas.height = height;
+
+        // SVGデータをBase64エンコード
+        const svgData = new XMLSerializer().serializeToString(svgElement);
+        const svgBase64 =
+          "data:image/svg+xml;base64," +
+          btoa(unescape(encodeURIComponent(svgData)));
+
+        // 画像オブジェクトを作成
+        const img = new Image();
+        img.onload = function () {
+          // キャンバスに描画
+          ctx.fillStyle = "white";
+          ctx.fillRect(0, 0, canvas.width, canvas.height);
+          ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+          // JPGに変換
+          const jpgDataUrl = canvas.toDataURL("image/jpeg", quality);
+
+          // JPGプレビュー表示
+          jpgPreview.src = jpgDataUrl;
+          jpgPreviewContainer.style.display = "block";
+
+          // 圧縮情報を表示
+          jpgInfo.textContent = `サイズ: ${canvas.width} × ${
+            canvas.height
+          } px | ${isCompressed ? "圧縮あり" : "圧縮なし（最高品質）"}`;
+
+          // ダウンロード用BLOBを作成
+          fetch(jpgDataUrl)
+            .then((res) => res.blob())
+            .then((blob) => {
+              jpgBlob = blob;
+              downloadBtn.disabled = false;
+
+              // ファイルサイズ表示を追加
+              const fileSizeMB = (blob.size / (1024 * 1024)).toFixed(2);
+              jpgInfo.textContent += ` | ファイルサイズ: ${fileSizeMB} MB`;
+            });
+        };
+
+        img.src = svgBase64;
+      }
+
+      // ダウンロードボタンクリック
+      downloadBtn.addEventListener("click", function () {
+        if (!jpgBlob) return;
+
+        // ファイル名を生成
+        let fileName = "converted.jpg";
+        if (svgFile && svgFile.name) {
+          fileName = svgFile.name.replace(/\.svg$/i, ".jpg");
+        }
+
+        // ダウンロードリンクを作成
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(jpgBlob);
+        link.download = fileName;
+
+        // リンクをクリック
+        document.body.appendChild(link);
+        link.click();
+
+        // 後処理
+        setTimeout(() => {
+          document.body.removeChild(link);
+          URL.revokeObjectURL(link.href);
+        }, 100);
+      });
+    </script>
+  </body>
+</html>
