@@ -1,1389 +1,2005 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
-  <!-- Definitions -->
-  <defs>
-    <!-- Background gradient -->
-    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#E8F5FE" />
-      <stop offset="100%" stop-color="#F8F9FA" />
-    </linearGradient>
-
-    <!-- Card gradients -->
-    <linearGradient id="win-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#0078D7" stop-opacity="0.1" />
-      <stop offset="100%" stop-color="#0078D7" stop-opacity="0.05" />
-    </linearGradient>
-    <linearGradient id="ctrl-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#19A15F" stop-opacity="0.1" />
-      <stop offset="100%" stop-color="#19A15F" stop-opacity="0.05" />
-    </linearGradient>
-    <linearGradient id="alt-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#D83B01" stop-opacity="0.1" />
-      <stop offset="100%" stop-color="#D83B01" stop-opacity="0.05" />
-    </linearGradient>
-    <linearGradient id="shift-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#5C2D91" stop-opacity="0.1" />
-      <stop offset="100%" stop-color="#5C2D91" stop-opacity="0.05" />
-    </linearGradient>
-
-    <!-- Shadow effects -->
-    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
-      <feDropShadow
-        dx="0"
-        dy="2"
-        stdDeviation="4"
-        flood-color="#000"
-        flood-opacity="0.1"
-      />
-    </filter>
-
-    <!-- Title shadow effect -->
-    <filter id="title-shadow" x="-5%" y="-5%" width="110%" height="120%">
-      <feDropShadow
-        dx="0"
-        dy="1"
-        stdDeviation="1"
-        flood-color="#0F172A"
-        flood-opacity="0.2"
-      />
-    </filter>
-  </defs>
-
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160">
   <!-- Background -->
-  <rect width="1920" height="1080" fill="url(#bg-gradient)" />
+  <rect width="3840" height="2160" fill="#f5f5f7" />
 
-  <!-- Subtle dot pattern -->
-  <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse">
-    <circle cx="2" cy="2" r="1" fill="#0078D7" fill-opacity="0.1" />
-  </pattern>
-  <rect width="1920" height="1080" fill="url(#dots)" />
-
-  <!-- Title -->
+  <!-- Main Title -->
   <text
-    x="960"
-    y="80"
-    font-family="'Segoe UI', Arial, sans-serif"
-    font-size="52"
-    font-weight="700"
-    fill="#0078D7"
+    x="1920"
+    y="205"
+    font-family="Helvetica, Arial, sans-serif"
+    font-size="100"
+    font-weight="bold"
     text-anchor="middle"
-    filter="url(#title-shadow)"
+    fill="#333333"
+    filter="drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.2))"
   >
-    Windows Shortcut
+    Win Shortcuts
   </text>
 
-  <!-- Windows Key Section -->
-  <g transform="translate(100, 150)">
+  <!-- Subtle Grid Pattern -->
+  <pattern id="grid" width="38" height="38" patternUnits="userSpaceOnUse">
+    <rect width="38" height="38" fill="#f5f5f7" />
+    <path
+      d="M 38 0 L 0 0 0 38"
+      fill="none"
+      stroke="#e6e9ef"
+      stroke-width="0.96"
+    />
+  </pattern>
+  <rect width="3840" height="2160" fill="url(#grid)" opacity="0.5" />
+
+  <!-- Grid layout for categories -->
+  <!-- Column 1 -->
+  <g transform="translate(320, 335)">
+    <!-- Basic Operations -->
     <rect
-      width="830"
-      height="360"
-      rx="16"
-      ry="16"
-      fill="url(#win-gradient)"
-      filter="url(#shadow)"
-      stroke="#0078D7"
-      stroke-width="2"
-      stroke-opacity="0.6"
+      x="0"
+      y="0"
+      width="768"
+      height="596"
+      rx="19"
+      ry="19"
+      fill="#ffffff"
+      stroke="#d0d0d0"
+      stroke-width="3.8"
+      filter="drop-shadow(0px 3.8px 5.7px rgba(0, 0, 0, 0.1))"
     />
     <text
-      x="40"
-      y="50"
-      font-family="'Segoe UI', Arial, sans-serif"
-      font-size="28"
-      font-weight="600"
-      fill="#0078D7"
+      x="384"
+      y="56"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="42"
+      font-weight="bold"
+      text-anchor="middle"
     >
-      Windows キー
+      基本操作
+    </text>
+    <text
+      x="38"
+      y="130"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+    >
+      Ctrl + C：
+    </text>
+    <text
+      x="288"
+      y="130"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+    >
+      コピー
+    </text>
+    <text
+      x="38"
+      y="177"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+    >
+      Ctrl + X：
+    </text>
+    <text
+      x="288"
+      y="177"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      切り取り
+    </text>
+    <text
+      x="38"
+      y="224"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Ctrl + V：
+    </text>
+    <text
+      x="288"
+      y="224"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      貼り付け
+    </text>
+    <text
+      x="38"
+      y="270"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Ctrl + Z：
+    </text>
+    <text
+      x="288"
+      y="270"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      元に戻す
+    </text>
+    <text
+      x="38"
+      y="317"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Ctrl + Y：
+    </text>
+    <text
+      x="288"
+      y="317"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      やり直す
+    </text>
+    <text
+      x="38"
+      y="363"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Ctrl + A：
+    </text>
+    <text
+      x="288"
+      y="363"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      すべてを選択
+    </text>
+    <text
+      x="38"
+      y="410"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Ctrl + F：
+    </text>
+    <text
+      x="288"
+      y="410"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      検索
+    </text>
+    <text
+      x="38"
+      y="456"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Ctrl + S：
+    </text>
+    <text
+      x="288"
+      y="456"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      保存する
+    </text>
+    <text
+      x="38"
+      y="503"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Ctrl + O：
+    </text>
+    <text
+      x="288"
+      y="503"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      ファイルを開く
+    </text>
+    <text
+      x="38"
+      y="549"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Ctrl + P：
+    </text>
+    <text
+      x="288"
+      y="549"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      印刷
     </text>
 
-    <!-- Left column -->
-    <g transform="translate(40, 100)">
-      <text
-        class="shortcut"
-        x="0"
-        y="0"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#0078D7"
-      >
-        Win
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="40"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#0078D7"
-      >
-        Win + D
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="80"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#0078D7"
-      >
-        Win + E
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="120"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#0078D7"
-      >
-        Win + I
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="160"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#0078D7"
-      >
-        Win + L
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="200"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#0078D7"
-      >
-        Win + M
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="240"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#0078D7"
-      >
-        Win + R
-      </text>
-
-      <text
-        class="description"
-        x="120"
-        y="0"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        スタートメニューを表示/非表示
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="40"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        デスクトップを表示する
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="80"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        エクスプローラーを起動する
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="120"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        Windowsの設定を起動
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="160"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        パソコンの画面をロック
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="200"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        すべてのウィンドウを最小化
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="240"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        ファイル名を指定して実行
-      </text>
-    </g>
-
-    <!-- Right column -->
-    <g transform="translate(450, 100)">
-      <text
-        class="shortcut"
-        x="0"
-        y="0"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#0078D7"
-      >
-        Win + Shift + S
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="40"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#0078D7"
-      >
-        Win + Tab
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="80"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#0078D7"
-      >
-        Win + V
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="120"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#0078D7"
-      >
-        Win + X
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="160"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#0078D7"
-      >
-        Win + ↑
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="200"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#0078D7"
-      >
-        Win + ↓
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="240"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#0078D7"
-      >
-        Win + .
-      </text>
-
-      <text
-        class="description"
-        x="135"
-        y="0"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        スクリーンショットの撮影
-      </text>
-      <text
-        class="description"
-        x="135"
-        y="40"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        タスクビューを表示
-      </text>
-      <text
-        class="description"
-        x="135"
-        y="80"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        クリップボード履歴を表示
-      </text>
-      <text
-        class="description"
-        x="135"
-        y="120"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        クイックリンクメニュー
-      </text>
-      <text
-        class="description"
-        x="135"
-        y="160"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        ウィンドウを最大化
-      </text>
-      <text
-        class="description"
-        x="135"
-        y="200"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        ウィンドウを最小化
-      </text>
-      <text
-        class="description"
-        x="135"
-        y="240"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        絵文字パネルを開く
-      </text>
-    </g>
+    <!-- Window Management -->
+    <rect
+      x="0"
+      y="633"
+      width="768"
+      height="968"
+      rx="19"
+      ry="19"
+      fill="#ffffff"
+      stroke="#d0d0d0"
+      stroke-width="3.8"
+      filter="drop-shadow(0px 3.8px 5.7px rgba(0, 0, 0, 0.1))"
+    />
+    <text
+      x="384"
+      y="689"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="42"
+      font-weight="bold"
+      text-anchor="middle"
+    >
+      ウィンドウ・アプリ管理
+    </text>
+    <text
+      x="38"
+      y="763"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Alt + F4：
+    </text>
+    <text
+      x="288"
+      y="763"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      アプリケーションを終了
+    </text>
+    <text
+      x="38"
+      y="810"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Ctrl + W：
+    </text>
+    <text
+      x="288"
+      y="810"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      ウインドウを閉じる
+    </text>
+    <text
+      x="38"
+      y="856"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Win + M：
+    </text>
+    <text
+      x="288"
+      y="856"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      すべてのウインドウを最小化
+    </text>
+    <text
+      x="38"
+      y="903"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Win + D：
+    </text>
+    <text
+      x="288"
+      y="903"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      デスクトップ表示
+    </text>
+    <text
+      x="38"
+      y="949"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Alt + Tab：
+    </text>
+    <text
+      x="288"
+      y="949"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      アプリケーション切り替え
+    </text>
+    <text
+      x="38"
+      y="996"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Win + Tab：
+    </text>
+    <text
+      x="288"
+      y="996"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      タスクビュー
+    </text>
+    <text
+      x="38"
+      y="1042"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Ctrl + N：
+    </text>
+    <text
+      x="288"
+      y="1042"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      新規ウィンドウを開く
+    </text>
+    <text
+      x="38"
+      y="1089"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Ctrl + T：
+    </text>
+    <text
+      x="288"
+      y="1089"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      新規タブを開く
+    </text>
+    <text
+      x="38"
+      y="1135"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Win + ↑：
+    </text>
+    <text
+      x="288"
+      y="1135"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      ウィンドウを最大化
+    </text>
+    <text
+      x="38"
+      y="1182"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Win + ↓：
+    </text>
+    <text
+      x="288"
+      y="1182"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      ウィンドウを最小化/元に戻す
+    </text>
+    <text
+      x="38"
+      y="1228"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Win + ←：
+    </text>
+    <text
+      x="288"
+      y="1228"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      ウィンドウを左半分にスナップ
+    </text>
+    <text
+      x="38"
+      y="1275"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Win + →：
+    </text>
+    <text
+      x="288"
+      y="1275"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      ウィンドウを右半分にスナップ
+    </text>
+    <text
+      x="38"
+      y="1321"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Ctrl + Shift + Esc：
+    </text>
+    <text
+      x="288"
+      y="1321"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      タスクマネージャーを開く
+    </text>
   </g>
 
-  <!-- Ctrl Key Section -->
-  <g transform="translate(990, 150)">
+  <!-- Column 2 -->
+  <g transform="translate(1132, 335)">
+    <!-- File Explorer Operations -->
     <rect
-      width="830"
-      height="360"
-      rx="16"
-      ry="16"
-      fill="url(#ctrl-gradient)"
-      filter="url(#shadow)"
-      stroke="#19A15F"
-      stroke-width="2"
-      stroke-opacity="0.6"
+      x="0"
+      y="0"
+      width="768"
+      height="968"
+      rx="19"
+      ry="19"
+      fill="#ffffff"
+      stroke="#d0d0d0"
+      stroke-width="3.8"
+      filter="drop-shadow(0px 3.8px 5.7px rgba(0, 0, 0, 0.1))"
     />
     <text
-      x="40"
-      y="50"
-      font-family="'Segoe UI', Arial, sans-serif"
-      font-size="28"
-      font-weight="600"
-      fill="#19A15F"
+      x="384"
+      y="56"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="42"
+      font-weight="bold"
+      text-anchor="middle"
+      fill="#333333"
     >
-      Ctrl キー
+      ファイルエクスプローラー操作
+    </text>
+    <text
+      x="38"
+      y="130"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Alt + ↑：
+    </text>
+    <text
+      x="288"
+      y="130"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      親フォルダへ移動
+    </text>
+    <text
+      x="38"
+      y="177"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Alt + ←：
+    </text>
+    <text
+      x="288"
+      y="177"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      戻る
+    </text>
+    <text
+      x="38"
+      y="224"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Alt + →：
+    </text>
+    <text
+      x="288"
+      y="224"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      進む
+    </text>
+    <text
+      x="38"
+      y="270"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Alt + Enter：
+    </text>
+    <text
+      x="288"
+      y="270"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      プロパティを表示
+    </text>
+    <text
+      x="38"
+      y="317"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      F2：
+    </text>
+    <text
+      x="288"
+      y="317"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      名前の変更
+    </text>
+    <text
+      x="38"
+      y="363"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Ctrl + Shift + N：
+    </text>
+    <text
+      x="288"
+      y="363"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      新規フォルダを作成
+    </text>
+    <text
+      x="38"
+      y="410"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Del：
+    </text>
+    <text
+      x="288"
+      y="410"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      ごみ箱へ移動
+    </text>
+    <text
+      x="38"
+      y="456"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Shift + Del：
+    </text>
+    <text
+      x="288"
+      y="456"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      完全削除（ごみ箱を経由せず）
+    </text>
+    <text
+      x="38"
+      y="503"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Ctrl + Shift + Del：
+    </text>
+    <text
+      x="288"
+      y="503"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      ごみ箱を空にする
+    </text>
+    <text
+      x="38"
+      y="549"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      F11：
+    </text>
+    <text
+      x="288"
+      y="549"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      全画面表示
+    </text>
+    <text
+      x="38"
+      y="596"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Win + E：
+    </text>
+    <text
+      x="288"
+      y="596"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      エクスプローラーを開く
+    </text>
+    <text
+      x="38"
+      y="642"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      F3 または Ctrl + F：
+    </text>
+    <text
+      x="288"
+      y="642"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      検索
+    </text>
+    <text
+      x="38"
+      y="689"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Alt + D：
+    </text>
+    <text
+      x="288"
+      y="689"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      アドレスバーを選択
     </text>
 
-    <!-- Left column -->
-    <g transform="translate(40, 100)">
-      <text
-        class="shortcut"
-        x="0"
-        y="0"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#19A15F"
-      >
-        Ctrl + A
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="40"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#19A15F"
-      >
-        Ctrl + C
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="80"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#19A15F"
-      >
-        Ctrl + X
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="120"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#19A15F"
-      >
-        Ctrl + V
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="160"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#19A15F"
-      >
-        Ctrl + Z
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="200"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#19A15F"
-      >
-        Ctrl + Y
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="240"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#19A15F"
-      >
-        Ctrl + F
-      </text>
-
-      <text
-        class="description"
-        x="120"
-        y="0"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        すべてを選択
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="40"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        選択した項目をコピー
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="80"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        選択した項目を切り取り
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="120"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        コピーした項目を貼り付け
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="160"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        操作を元に戻す
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="200"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        元に戻した操作をやり直す
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="240"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        検索
-      </text>
-    </g>
-
-    <!-- Right column -->
-    <g transform="translate(450, 100)">
-      <text
-        class="shortcut"
-        x="0"
-        y="0"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#19A15F"
-      >
-        Ctrl + N
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="40"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#19A15F"
-      >
-        Ctrl + O
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="80"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#19A15F"
-      >
-        Ctrl + P
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="120"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#19A15F"
-      >
-        Ctrl + S
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="160"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#19A15F"
-      >
-        Ctrl + W
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="200"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#19A15F"
-      >
-        Ctrl + Tab
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="240"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#19A15F"
-      >
-        Ctrl + Shift + Esc
-      </text>
-
-      <text
-        class="description"
-        x="135"
-        y="0"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        新規ウィンドウを開く
-      </text>
-      <text
-        class="description"
-        x="135"
-        y="40"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        ファイルを開く
-      </text>
-      <text
-        class="description"
-        x="135"
-        y="80"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        印刷画面を表示
-      </text>
-      <text
-        class="description"
-        x="135"
-        y="120"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        ファイルを保存
-      </text>
-      <text
-        class="description"
-        x="135"
-        y="160"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        現在のウィンドウを閉じる
-      </text>
-      <text
-        class="description"
-        x="135"
-        y="200"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        タブを切り替え
-      </text>
-      <text
-        class="description"
-        x="135"
-        y="240"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        タスクマネージャー
-      </text>
-    </g>
+    <!-- System Operations -->
+    <rect
+      x="0"
+      y="1005"
+      width="768"
+      height="596"
+      rx="19"
+      ry="19"
+      fill="#ffffff"
+      stroke="#d0d0d0"
+      stroke-width="3.8"
+      filter="drop-shadow(0px 3.8px 5.7px rgba(0, 0, 0, 0.1))"
+    />
+    <text
+      x="384"
+      y="1061"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="42"
+      font-weight="bold"
+      text-anchor="middle"
+      fill="#333333"
+    >
+      システム操作
+    </text>
+    <text
+      x="38"
+      y="1135"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Win：
+    </text>
+    <text
+      x="288"
+      y="1135"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      スタートメニューを開く
+    </text>
+    <text
+      x="38"
+      y="1182"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Win + S：
+    </text>
+    <text
+      x="288"
+      y="1182"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      検索
+    </text>
+    <text
+      x="38"
+      y="1228"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Win + I：
+    </text>
+    <text
+      x="288"
+      y="1228"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      設定を開く
+    </text>
+    <text
+      x="38"
+      y="1275"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Win + L：
+    </text>
+    <text
+      x="288"
+      y="1275"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      画面をロック
+    </text>
+    <text
+      x="38"
+      y="1321"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Win + X：
+    </text>
+    <text
+      x="288"
+      y="1321"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      クイックリンクメニュー
+    </text>
+    <text
+      x="38"
+      y="1368"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Win + R：
+    </text>
+    <text
+      x="288"
+      y="1368"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      ファイル名を指定して実行
+    </text>
+    <text
+      x="38"
+      y="1414"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Win + +：
+    </text>
+    <text
+      x="288"
+      y="1414"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      拡大鏡を使用してズームイン
+    </text>
+    <text
+      x="38"
+      y="1461"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Win + -：
+    </text>
+    <text
+      x="288"
+      y="1461"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      拡大鏡を使用してズームアウト
+    </text>
   </g>
 
-  <!-- Alt Key Section -->
-  <g transform="translate(100, 550)">
+  <!-- Column 3 -->
+  <g transform="translate(1944, 335)">
+    <!-- Text Editing -->
     <rect
-      width="830"
-      height="360"
-      rx="16"
-      ry="16"
-      fill="url(#alt-gradient)"
-      filter="url(#shadow)"
-      stroke="#D83B01"
-      stroke-width="2"
-      stroke-opacity="0.6"
+      x="0"
+      y="0"
+      width="768"
+      height="968"
+      rx="19"
+      ry="19"
+      fill="#ffffff"
+      stroke="#d0d0d0"
+      stroke-width="3.8"
+      filter="drop-shadow(0px 3.8px 5.7px rgba(0, 0, 0, 0.1))"
     />
     <text
-      x="40"
-      y="50"
-      font-family="'Segoe UI', Arial, sans-serif"
-      font-size="28"
-      font-weight="600"
-      fill="#D83B01"
+      x="384"
+      y="56"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="42"
+      font-weight="bold"
+      text-anchor="middle"
+      fill="#333333"
     >
-      Alt キー
+      テキスト編集
+    </text>
+    <text
+      x="38"
+      y="130"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Ctrl + B：
+    </text>
+    <text
+      x="288"
+      y="130"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      太字
+    </text>
+    <text
+      x="38"
+      y="177"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Ctrl + I：
+    </text>
+    <text
+      x="288"
+      y="177"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      イタリック
+    </text>
+    <text
+      x="38"
+      y="224"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Ctrl + U：
+    </text>
+    <text
+      x="288"
+      y="224"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      下線
+    </text>
+    <text
+      x="38"
+      y="270"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      F7：
+    </text>
+    <text
+      x="288"
+      y="270"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      スペルチェック
+    </text>
+    <text
+      x="38"
+      y="317"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Shift + End：
+    </text>
+    <text
+      x="288"
+      y="317"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      行末まで選択
+    </text>
+    <text
+      x="38"
+      y="363"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Shift + Home：
+    </text>
+    <text
+      x="288"
+      y="363"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      行頭まで選択
+    </text>
+    <text
+      x="38"
+      y="410"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Ctrl + Home：
+    </text>
+    <text
+      x="288"
+      y="410"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      ドキュメントの先頭へ移動
+    </text>
+    <text
+      x="38"
+      y="456"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Ctrl + End：
+    </text>
+    <text
+      x="288"
+      y="456"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      ドキュメントの末尾へ移動
+    </text>
+    <text
+      x="38"
+      y="503"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Ctrl + Shift + Home：
+    </text>
+    <text
+      x="288"
+      y="503"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      ドキュメントの先頭まで選択
+    </text>
+    <text
+      x="38"
+      y="549"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Ctrl + Shift + End：
+    </text>
+    <text
+      x="288"
+      y="549"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      ドキュメントの末尾まで選択
+    </text>
+    <text
+      x="38"
+      y="596"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Ctrl + ←：
+    </text>
+    <text
+      x="288"
+      y="596"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      単語単位で左に移動
+    </text>
+    <text
+      x="38"
+      y="642"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Ctrl + →：
+    </text>
+    <text
+      x="288"
+      y="642"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      単語単位で右に移動
+    </text>
+    <text
+      x="38"
+      y="689"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Win + .：
+    </text>
+    <text
+      x="288"
+      y="689"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      絵文字パネルを開く
+    </text>
+    <text
+      x="38"
+      y="735"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Ctrl + Backspace：
+    </text>
+    <text
+      x="288"
+      y="735"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      前の単語を削除
+    </text>
+    <text
+      x="38"
+      y="782"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Ctrl + Del：
+    </text>
+    <text
+      x="288"
+      y="782"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      次の単語を削除
+    </text>
+    <text
+      x="38"
+      y="828"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Home：
+    </text>
+    <text
+      x="288"
+      y="828"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      行頭へ移動
+    </text>
+    <text
+      x="38"
+      y="875"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      End：
+    </text>
+    <text
+      x="288"
+      y="875"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      行末へ移動
     </text>
 
-    <!-- Left column -->
-    <g transform="translate(40, 100)">
-      <text
-        class="shortcut"
-        x="0"
-        y="0"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#D83B01"
-      >
-        Alt + Tab
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="40"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#D83B01"
-      >
-        Alt + F4
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="80"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#D83B01"
-      >
-        Alt + Space
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="120"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#D83B01"
-      >
-        Alt + Enter
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="160"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#D83B01"
-      >
-        Alt + F
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="200"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#D83B01"
-      >
-        Alt + E
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="240"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#D83B01"
-      >
-        Alt + Esc
-      </text>
-
-      <text
-        class="description"
-        x="120"
-        y="0"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        開いているアプリの切り替え
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="40"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        アクティブなアプリを終了
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="80"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        ウィンドウメニューを表示
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="120"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        プロパティを表示
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="160"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        ファイルメニューを開く
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="200"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        編集メニューを開く
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="240"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        タスク順に切り替え
-      </text>
-    </g>
-
-    <!-- Right column -->
-    <g transform="translate(450, 100)">
-      <text
-        class="shortcut"
-        x="0"
-        y="0"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#D83B01"
-      >
-        Alt + Ctrl + Del
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="40"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#D83B01"
-      >
-        Alt + PrtScn
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="80"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#D83B01"
-      >
-        Alt + ←
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="120"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#D83B01"
-      >
-        Alt + →
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="160"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#D83B01"
-      >
-        Alt + Shift + Tab
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="200"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#D83B01"
-      >
-        Alt + Home
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="240"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#D83B01"
-      >
-        Alt + Ctrl + Tab
-      </text>
-
-      <text
-        class="description"
-        x="135"
-        y="0"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        セキュリティ画面を表示
-      </text>
-      <text
-        class="description"
-        x="135"
-        y="40"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        現在ウィンドウをキャプチャ
-      </text>
-      <text
-        class="description"
-        x="135"
-        y="80"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        ブラウザで前のページに移動
-      </text>
-      <text
-        class="description"
-        x="135"
-        y="120"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        ブラウザで次のページに移動
-      </text>
-      <text
-        class="description"
-        x="135"
-        y="160"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        逆順にアプリ切り替え
-      </text>
-      <text
-        class="description"
-        x="135"
-        y="200"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        ブラウザでホームページに移動
-      </text>
-      <text
-        class="description"
-        x="135"
-        y="240"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        タスク切替表示継続
-      </text>
-    </g>
+    <!-- Screenshots & Browser -->
+    <rect
+      x="0"
+      y="1005"
+      width="768"
+      height="596"
+      rx="19"
+      ry="19"
+      fill="#ffffff"
+      stroke="#d0d0d0"
+      stroke-width="3.8"
+      filter="drop-shadow(0px 3.8px 5.7px rgba(0, 0, 0, 0.1))"
+    />
+    <text
+      x="384"
+      y="1061"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="42"
+      font-weight="bold"
+      text-anchor="middle"
+      fill="#333333"
+    >
+      スクリーンショット・ブラウザ
+    </text>
+    <text
+      x="38"
+      y="1135"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Print Screen：
+    </text>
+    <text
+      x="288"
+      y="1135"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      画面全体をクリップボードにコピー
+    </text>
+    <text
+      x="38"
+      y="1182"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Alt + Print Screen：
+    </text>
+    <text
+      x="288"
+      y="1182"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      アクティブウィンドウをコピー
+    </text>
+    <text
+      x="38"
+      y="1228"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Win + Shift + S：
+    </text>
+    <text
+      x="288"
+      y="1228"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      範囲選択スクリーンショット
+    </text>
+    <text
+      x="38"
+      y="1275"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Win + Print Screen：
+    </text>
+    <text
+      x="288"
+      y="1275"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      画面全体を保存
+    </text>
+    <text
+      x="38"
+      y="1321"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Ctrl + Shift + T：
+    </text>
+    <text
+      x="288"
+      y="1321"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      最後に閉じたタブを復元
+    </text>
+    <text
+      x="38"
+      y="1368"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Ctrl + Tab：
+    </text>
+    <text
+      x="288"
+      y="1368"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      次のタブへ移動
+    </text>
+    <text
+      x="38"
+      y="1414"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Ctrl + Shift + Tab：
+    </text>
+    <text
+      x="288"
+      y="1414"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      前のタブへ移動
+    </text>
+    <text
+      x="38"
+      y="1461"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      F5 または Ctrl + R：
+    </text>
+    <text
+      x="288"
+      y="1461"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      ページを更新
+    </text>
+    <text
+      x="38"
+      y="1507"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Ctrl + F5：
+    </text>
+    <text
+      x="288"
+      y="1507"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      キャッシュを無視して更新
+    </text>
   </g>
 
-  <!-- Shift Key Section -->
-  <g transform="translate(990, 550)">
+  <!-- Column 4 -->
+  <g transform="translate(2756, 335)">
+    <!-- Power Related -->
     <rect
-      width="830"
-      height="360"
-      rx="16"
-      ry="16"
-      fill="url(#shift-gradient)"
-      filter="url(#shadow)"
-      stroke="#5C2D91"
-      stroke-width="2"
-      stroke-opacity="0.6"
+      x="0"
+      y="0"
+      width="768"
+      height="372"
+      rx="19"
+      ry="19"
+      fill="#ffffff"
+      stroke="#d0d0d0"
+      stroke-width="3.8"
+      filter="drop-shadow(0px 3.8px 5.7px rgba(0, 0, 0, 0.1))"
     />
     <text
-      x="40"
-      y="50"
-      font-family="'Segoe UI', Arial, sans-serif"
-      font-size="28"
-      font-weight="600"
-      fill="#5C2D91"
+      x="384"
+      y="56"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="42"
+      font-weight="bold"
+      text-anchor="middle"
+      fill="#333333"
     >
-      Shift キー＆便利なキー
+      電源関連
+    </text>
+    <text
+      x="38"
+      y="130"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Alt + F4：
+    </text>
+    <text
+      x="288"
+      y="130"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      シャットダウンダイアログを表示
+    </text>
+    <text
+      x="38"
+      y="177"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Win + X, U, U：
+    </text>
+    <text
+      x="288"
+      y="177"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      シャットダウン
+    </text>
+    <text
+      x="38"
+      y="224"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Win + X, U, R：
+    </text>
+    <text
+      x="288"
+      y="224"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      再起動
+    </text>
+    <text
+      x="38"
+      y="270"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Win + X, U, S：
+    </text>
+    <text
+      x="288"
+      y="270"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      スリープ
+    </text>
+    <text
+      x="38"
+      y="317"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Win + X, U, H：
+    </text>
+    <text
+      x="288"
+      y="317"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      休止状態
     </text>
 
-    <!-- Left column -->
-    <g transform="translate(40, 100)">
-      <text
-        class="shortcut"
-        x="0"
-        y="0"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#5C2D91"
-      >
-        Shift + Delete
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="40"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#5C2D91"
-      >
-        Shift + クリック
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="80"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#5C2D91"
-      >
-        Shift + 矢印
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="120"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#5C2D91"
-      >
-        Shift + F10
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="160"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#5C2D91"
-      >
-        Shift + Tab
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="200"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#5C2D91"
-      >
-        Shift + Home
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="240"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#5C2D91"
-      >
-        Shift + Ctrl + N
-      </text>
+    <!-- Other Useful Shortcuts -->
+    <rect
+      x="0"
+      y="410"
+      width="768"
+      height="558"
+      rx="19"
+      ry="19"
+      fill="#ffffff"
+      stroke="#d0d0d0"
+      stroke-width="3.8"
+      filter="drop-shadow(0px 3.8px 5.7px rgba(0, 0, 0, 0.1))"
+    />
+    <text
+      x="384"
+      y="465"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="42"
+      font-weight="bold"
+      text-anchor="middle"
+      fill="#333333"
+    >
+      その他
+    </text>
+    <text
+      x="38"
+      y="540"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Win + Shift + M：
+    </text>
+    <text
+      x="288"
+      y="540"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      最小化されたウィンドウを元に戻す
+    </text>
+    <text
+      x="38"
+      y="586"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Win + Space：
+    </text>
+    <text
+      x="288"
+      y="586"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      入力言語を切り替える
+    </text>
+    <text
+      x="38"
+      y="633"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Win + G：
+    </text>
+    <text
+      x="288"
+      y="633"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      ゲームバーを開く
+    </text>
+    <text
+      x="38"
+      y="679"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Win + V：
+    </text>
+    <text
+      x="288"
+      y="679"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      クリップボード履歴を開く
+    </text>
+    <text
+      x="38"
+      y="726"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Win + P：
+    </text>
+    <text
+      x="288"
+      y="726"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      表示モードの切り替え
+    </text>
+    <text
+      x="38"
+      y="772"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Win + Ctrl + D：
+    </text>
+    <text
+      x="288"
+      y="772"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      新しい仮想デスクトップを作成
+    </text>
+    <text
+      x="38"
+      y="819"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Win + Ctrl + ←/→：
+    </text>
+    <text
+      x="288"
+      y="819"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      仮想デスクトップを切り替え
+    </text>
+    <text
+      x="38"
+      y="865"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      Win + Ctrl + F4：
+    </text>
+    <text
+      x="288"
+      y="865"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="27"
+      fill="#333333"
+    >
+      現在の仮想デスクトップを閉じる
+    </text>
 
-      <text
-        class="description"
-        x="120"
-        y="0"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        アイテムを完全に削除
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="40"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        連続選択
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="80"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        複数の項目を選択
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="120"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        右クリックメニューを表示
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="160"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        前のフィールドに移動
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="200"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        行頭までを選択
-      </text>
-      <text
-        class="description"
-        x="120"
-        y="240"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        新しいフォルダを作成
-      </text>
-    </g>
+    <!-- Key Symbols Legend -->
+    <rect
+      x="0"
+      y="1005"
+      width="768"
+      height="596"
+      rx="19"
+      ry="19"
+      fill="#ffffff"
+      stroke="#d0d0d0"
+      stroke-width="3.8"
+      filter="drop-shadow(0px 3.8px 5.7px rgba(0, 0, 0, 0.1))"
+    />
+    <text
+      x="384"
+      y="1061"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="42"
+      font-weight="bold"
+      text-anchor="middle"
+      fill="#333333"
+    >
+      キー記号対応
+    </text>
 
-    <!-- Right column -->
-    <g transform="translate(450, 100)">
-      <text
-        class="shortcut"
-        x="0"
-        y="0"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#5C2D91"
-      >
-        F1
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="40"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#5C2D91"
-      >
-        F2
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="80"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#5C2D91"
-      >
-        F3
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="120"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#5C2D91"
-      >
-        F5
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="160"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#5C2D91"
-      >
-        F11
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="200"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#5C2D91"
-      >
-        Win + G
-      </text>
-      <text
-        class="shortcut"
-        x="0"
-        y="240"
-        font-family="'Segoe UI', monospace"
-        font-size="15"
-        font-weight="600"
-        fill="#5C2D91"
-      >
-        Win + ←/→
-      </text>
+    <rect
+      x="38"
+      y="1117"
+      width="77"
+      height="77"
+      rx="10"
+      ry="10"
+      fill="#f5f7fa"
+      stroke="#c0c0c0"
+      stroke-width="1.9"
+    />
+    <text
+      x="77"
+      y="1168"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="35"
+      text-anchor="middle"
+      fill="#333333"
+    >
+      Ctrl
+    </text>
+    <text
+      x="154"
+      y="1168"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="31"
+      fill="#333333"
+    >
+      Control
+    </text>
 
-      <text
-        class="description"
-        x="135"
-        y="0"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        ヘルプを表示
-      </text>
-      <text
-        class="description"
-        x="135"
-        y="40"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        選択したアイテムの名前を変更
-      </text>
-      <text
-        class="description"
-        x="135"
-        y="80"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        ファイル内検索
-      </text>
-      <text
-        class="description"
-        x="135"
-        y="120"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        更新/再読み込み
-      </text>
-      <text
-        class="description"
-        x="135"
-        y="160"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        全画面表示の切り替え
-      </text>
-      <text
-        class="description"
-        x="135"
-        y="200"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        ゲームバーを開く
-      </text>
-      <text
-        class="description"
-        x="135"
-        y="240"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="15"
-        fill="#334155"
-      >
-        ウィンドウを半分に配置
-      </text>
-    </g>
+    <rect
+      x="38"
+      y="1210"
+      width="77"
+      height="77"
+      rx="10"
+      ry="10"
+      fill="#f5f7fa"
+      stroke="#c0c0c0"
+      stroke-width="1.9"
+    />
+    <text
+      x="77"
+      y="1261"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="35"
+      text-anchor="middle"
+      fill="#333333"
+    >
+      Alt
+    </text>
+    <text
+      x="154"
+      y="1261"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="31"
+      fill="#333333"
+    >
+      Alt
+    </text>
+
+    <rect
+      x="38"
+      y="1303"
+      width="77"
+      height="77"
+      rx="10"
+      ry="10"
+      fill="#f5f7fa"
+      stroke="#c0c0c0"
+      stroke-width="1.9"
+    />
+    <text
+      x="77"
+      y="1354"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="35"
+      text-anchor="middle"
+      fill="#333333"
+    >
+      Shift
+    </text>
+    <text
+      x="154"
+      y="1354"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="31"
+      fill="#333333"
+    >
+      Shift
+    </text>
+
+    <rect
+      x="38"
+      y="1396"
+      width="77"
+      height="77"
+      rx="10"
+      ry="10"
+      fill="#f5f7fa"
+      stroke="#c0c0c0"
+      stroke-width="1.9"
+    />
+    <text
+      x="77"
+      y="1447"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="35"
+      text-anchor="middle"
+      fill="#333333"
+    >
+      Win
+    </text>
+    <text
+      x="154"
+      y="1447"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="31"
+      fill="#333333"
+    >
+      Win キー
+    </text>
+
+    <rect
+      x="384"
+      y="1117"
+      width="77"
+      height="77"
+      rx="10"
+      ry="10"
+      fill="#f5f7fa"
+      stroke="#c0c0c0"
+      stroke-width="1.9"
+    />
+    <text
+      x="422"
+      y="1168"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="35"
+      text-anchor="middle"
+      fill="#333333"
+    >
+      ↑
+    </text>
+    <text
+      x="499"
+      y="1168"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="31"
+      fill="#333333"
+    >
+      上矢印
+    </text>
+
+    <rect
+      x="384"
+      y="1210"
+      width="77"
+      height="77"
+      rx="10"
+      ry="10"
+      fill="#f5f7fa"
+      stroke="#c0c0c0"
+      stroke-width="1.9"
+    />
+    <text
+      x="422"
+      y="1261"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="35"
+      text-anchor="middle"
+      fill="#333333"
+    >
+      ↓
+    </text>
+    <text
+      x="499"
+      y="1261"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="31"
+      fill="#333333"
+    >
+      下矢印
+    </text>
+
+    <rect
+      x="384"
+      y="1303"
+      width="77"
+      height="77"
+      rx="10"
+      ry="10"
+      fill="#f5f7fa"
+      stroke="#c0c0c0"
+      stroke-width="1.9"
+    />
+    <text
+      x="422"
+      y="1354"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="35"
+      text-anchor="middle"
+      fill="#333333"
+    >
+      ←
+    </text>
+    <text
+      x="499"
+      y="1354"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="31"
+      fill="#333333"
+    >
+      左矢印
+    </text>
+
+    <rect
+      x="384"
+      y="1396"
+      width="77"
+      height="77"
+      rx="10"
+      ry="10"
+      fill="#f5f7fa"
+      stroke="#c0c0c0"
+      stroke-width="1.9"
+    />
+    <text
+      x="422"
+      y="1447"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="35"
+      text-anchor="middle"
+      fill="#333333"
+    >
+      →
+    </text>
+    <text
+      x="499"
+      y="1447"
+      font-family="Helvetica, Arial, sans-serif"
+      font-size="31"
+      fill="#333333"
+    >
+      右矢印
+    </text>
   </g>
 </svg>
